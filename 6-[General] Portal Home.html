@@ -1,0 +1,1553 @@
+{% if portal.current_tab and portal.current_tab == "home" %}
+<section>
+  {{ page_message }}
+</section>
+
+<!-- Search Box -->
+<section class="container-fluid px-0 fw-helpcenter mb-md-n64">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 col-lg-6 mx-auto">
+        <div class="news-banner">
+          <div class="news-content">
+            <b class="news-subject">{{ importantNotice }}</b>
+            <span class="news-title">{{ importantMessage }}</span>
+            <br><br><br>
+          </div>
+        </div>
+        <img src="https://emura-pan.com/theme/emura/product/eliminates/after.jpg" alt="">
+        <p class="text-p">
+          {% if portal.current_language.code == "en" %}
+          How can we help?
+          {% elsif portal.current_language.code == "fr" %}
+          Comment pouvons nous aider?
+          {% elsif portal.current_language.code == "fil" %}
+          Paano kami makakatulong?
+          {% elsif portal.current_language.code == "de" %}
+          Wie können wir helfen?
+          {% elsif portal.current_language.code == "ar" %}
+          كيف يمكن أن نساعد؟
+          {% elsif portal.current_language.code == "bg" %}
+          Как можем да помогнем?
+          {% elsif portal.current_language.code == "zh-CN" %}
+          我们能帮你什么吗？
+          {% elsif portal.current_language.code == "zh-TW" %}
+          我們能幫你什麼嗎？
+          {% elsif portal.current_language.code == "hr" %}
+          Kako možemo pomoći?
+          {% elsif portal.current_language.code == "cs" %}
+          Jak můžeme pomoci?
+          {% elsif portal.current_language.code == "da" %}
+          Hvordan kan vi hjælpe?
+          {% elsif portal.current_language.code == "fi" %}
+          Kuinka voimme auttaa?
+          {% elsif portal.current_language.code == "nl" %}
+          Hoe kunnen we helpen?
+          {% elsif portal.current_language.code == "el" %}
+          Πώς μπορούμε να βοηθήσουμε?
+          {% elsif portal.current_language.code == "he" %}
+          איך אנחנו יכולים לעזור?
+          {% elsif portal.current_language.code == "hu" %}
+          Hogyan segíthetünk?
+          {% elsif portal.current_language.code == "id" %}
+          Bagaimana kami bisa membantu?
+          {% elsif portal.current_language.code == "it" %}
+          Come possiamo aiutare?
+          {% elsif portal.current_language.code == "ja-JP" %}
+          どのように我々は助けることができます？
+          {% elsif portal.current_language.code == "ko" %}
+          어떻게 도와드릴까요?
+          {% elsif portal.current_language.code == "ms" %}
+          Bagaimana kami boleh membantu?
+          {% elsif portal.current_language.code == "nb-NO" %}
+          Hvordan kan vi hjelpe?
+          {% elsif portal.current_language.code == "pl" %}
+          Jak możemy pomóc?
+          {% elsif portal.current_language.code == "pt-BR" %}
+          Como podemos ajudar?
+          {% elsif portal.current_language.code == "pt-PT" %}
+          Como podemos ajudar?
+          {% elsif portal.current_language.code == "ro" %}
+          Cum putem ajuta?
+          {% elsif portal.current_language.code == "sk" %}
+          Ako môžeme pomôcť?
+          {% elsif portal.current_language.code == "sl" %}
+          Kako lahko pomagamo?
+          {% elsif portal.current_language.code == "es" %}
+          ¿Cómo podemos ayudar?
+          {% elsif portal.current_language.code == "sv-SE" %}
+          Hur kan vi hjälpa?
+          {% elsif portal.current_language.code == "th" %}
+          เราสามารถช่วยได้อย่างไร?
+          {% elsif portal.current_language.code == "tr" %}
+          Nasıl yardımcı olabiliriz?
+          {% elsif portal.current_language.code == "uk" %}
+          Як ми можемо допомогти?
+          {% elsif portal.current_language.code == "vi" %}
+          Làm thế nào chúng ta có thể giúp đỡ?
+          {% endif %}
+          {{ portal | search_element: search_text }}
+        </p>  
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Video -->
+<section class="container-fluid px-0 mb-60 mt-md-16">
+  <div class="container">
+    <div class="collection">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <div class="content swiper-slide">
+            <video controls playsinline id="video1" class="product-video" poster="https://dl.dropboxusercontent.com/s/wcniiiax8zdol2jwizes9/Frying-Pan-Unboxing.png?rlkey=2323sdw4j9w955vfa1fg69rdk&st=p4jcci8j&dl=0">
+              <source src="https://dl.dropboxusercontent.com/s/i93mxdogswlut0h3sr0bo/Frying-Pan-Unboxing.mp4?rlkey=9tfbzrjgmmru5d99qb6pmgdts&st=nft66n2x&dl=0" type="video/mp4">
+            </video>
+            <div class="text-content">
+              <h3>
+                {% if portal.current_language.code == "en" %}
+                Frying Pan - Unboxing
+                {% elsif portal.current_language.code == "de" %}
+                Bratpfanne – Auspacken
+                {% elsif portal.current_language.code == "es" %}
+                Sartén - Desempaquetado
+                {% elsif portal.current_language.code == "fr" %}
+                Poêle à frire - Déballage
+                {% elsif portal.current_language.code == "he" %}
+                מחבת - פתיחת האריזה
+                {% elsif portal.current_language.code == "hr" %}
+                Tava za pečenje – raspakiranje
+                {% elsif portal.current_language.code == "hu" %}
+                Serpenyő – Kicsomagolás
+                {% elsif portal.current_language.code == "it" %}
+                Padella - disimballaggio
+                {% elsif portal.current_language.code == "nb-NO" %}
+                Stekepanne – unboxing
+                {% elsif portal.current_language.code == "pl" %}
+                Patelnia – rozpakowanie
+                {% elsif portal.current_language.code == "pt-PT" %}
+                Frigideira – apresentação
+                {% elsif portal.current_language.code == "ro" %}
+                Tigaie – unboxing
+                {% elsif portal.current_language.code == "sk" %}
+                Panvica - Unboxing
+                {% elsif portal.current_language.code == "sl" %}
+                Ponev – razpakiranje
+                {% elsif portal.current_language.code == "sv-SE" %}
+                Stekpanna – Uppackning
+                {% endif %}
+              </h3>
+            </div>
+          </div>
+
+          <div class="content swiper-slide">
+            <video controls playsinline id="video2" class="product-video" poster="https://dl.dropboxusercontent.com/s/voneeazp3k8y7s2uynp1l/Frying-Pan-Specifications.png?rlkey=07e2jttodrmvocjnsqig86x6n&st=20o169d6&dl=0">
+              <source src="https://dl.dropboxusercontent.com/s/95d3t0ljkt1qm9gh088ua/Frying-Pan-Specifications.mp4?rlkey=29k6ix2x768rw2hvs1ii11gqc&st=3l0b7pai&dl=0" type="video/mp4">
+            </video>
+            <div class="text-content">
+              <h3>
+                {% if portal.current_language.code == "en" %}
+                Frying Pan - Specifications
+                {% elsif portal.current_language.code == "de" %}
+                Bratpfanne – Technische Daten
+                {% elsif portal.current_language.code == "es" %}
+                Sartén - Especificaciones
+                {% elsif portal.current_language.code == "fr" %}
+                Poêle à frire - Caractéristiques
+                {% elsif portal.current_language.code == "he" %}
+                מחבת - מפרטים
+                {% elsif portal.current_language.code == "hr" %}
+                Tava za pečenje – specifikacije
+                {% elsif portal.current_language.code == "hu" %}
+                Serpenyő – Műszaki adatok
+                {% elsif portal.current_language.code == "it" %}
+                Padella - specifiche
+                {% elsif portal.current_language.code == "nb-NO" %}
+                Stekepanne – spesifikasjoner
+                {% elsif portal.current_language.code == "pl" %}
+                Patelnia – specyfikacja
+                {% elsif portal.current_language.code == "pt-PT" %}
+                Frigideira – especificações
+                {% elsif portal.current_language.code == "ro" %}
+                Tigaie – specificații
+                {% elsif portal.current_language.code == "sk" %}
+                Panvica - Špecifikácie
+                {% elsif portal.current_language.code == "sl" %}
+                Ponev – specifikacije
+                {% elsif portal.current_language.code == "sv-SE" %}
+                Stekpanna – Specifikationer
+                {% endif %}
+              </h3>
+            </div>
+          </div>
+
+          <div class="content swiper-slide">
+            <video controls playsinline id="video3" class="product-video" poster="https://dl.dropboxusercontent.com/s/y5pcorkfkwxk4hb9jflpq/Frying-Pan-Features.png?rlkey=lkk05tqir23bh9hj6a3v9jxzc&st=1gk8j36i&dl=0">
+              <source src="https://dl.dropboxusercontent.com/s/mnxpyjtethee8ndgeds4d/Frying-Pan-Features.mp4?rlkey=mzvuef64lc5nkrp1je1m81yly&st=anv54bwz&dl=0" type="video/mp4">
+            </video>
+            <div class="text-content">
+              <h3>
+                {% if portal.current_language.code == "en" %}
+                Frying Pan - Features and Functions
+                {% elsif portal.current_language.code == "de" %}
+                Bratpfanne – Features und Funktionen
+                {% elsif portal.current_language.code == "es" %}
+                Sartén – Características y funciones
+                {% elsif portal.current_language.code == "fr" %}
+                Poêle à frire - Caractéristiques et fonctions
+                {% elsif portal.current_language.code == "he" %}
+                מחבת - תכונות ושימושים
+                {% elsif portal.current_language.code == "hr" %}
+                Tava za pečenje – značajke i funkcije
+                {% elsif portal.current_language.code == "hu" %}
+                Serpenyő - Jellemzők és funkciók
+                {% elsif portal.current_language.code == "it" %}
+                Padella - caratteristiche e funzionalità
+                {% elsif portal.current_language.code == "nb-NO" %}
+                Stekepanne – egenskaper og funksjoner
+                {% elsif portal.current_language.code == "pl" %}
+                Patelnia – Cechy i funkcje
+                {% elsif portal.current_language.code == "pt-PT" %}
+                Frigideira – características e funções
+                {% elsif portal.current_language.code == "ro" %}
+                Tigaie – caracteristici și funcții
+                {% elsif portal.current_language.code == "sk" %}
+                Panvica - Vlastnosti a Funkcie
+                {% elsif portal.current_language.code == "sl" %}
+                Ponev – lastnosti in funkcije
+                {% elsif portal.current_language.code == "sv-SE" %}
+                Stekpanna – Egenskaper och funktioner
+                {% endif %}
+              </h3>
+            </div>
+          </div>
+
+          <div class="content swiper-slide">
+            <video controls playsinline id="video4" class="product-video" poster="https://dl.dropboxusercontent.com/s/4dxysmpldlzkee92oixir/Standing-Lid-Unboxing.png?rlkey=tyoly8svgelk6688p8bb90uwe&st=qvb2utjk&dl=0">
+              <source src="https://dl.dropboxusercontent.com/s/1ltrkc6l3jq95nnmpdgjt/Lid-Unboxing.mp4?rlkey=qxck68fjmj9xk1t9m9tinxpew&st=9m7b35cd&dl=0" type="video/mp4">
+            </video>
+            <div class="text-content">
+              <h3>
+                {% if portal.current_language.code == "en" %}
+                Standing Lid - Unboxing
+                {% elsif portal.current_language.code == "de" %}
+                Stehender Deckel – Auspacken
+                {% elsif portal.current_language.code == "es" %}
+                Tapa vertical - Desempaquetado
+                {% elsif portal.current_language.code == "fr" %}
+                Couvercle sur pied - Déballage
+                {% elsif portal.current_language.code == "he" %}
+                מכסה עומד - פתיחת האריזה
+                {% elsif portal.current_language.code == "hr" %}
+                Stajaći poklopac – raspakiranje
+                {% elsif portal.current_language.code == "hu" %}
+                Álló fedél – Kicsomagolás
+                {% elsif portal.current_language.code == "it" %}
+                Coperchio con supporto - disimballaggio
+                {% elsif portal.current_language.code == "nb-NO" %}
+                Stående lokk – unboxing
+                {% elsif portal.current_language.code == "pl" %}
+                Stojąca pokrywka – rozpakowanie
+                {% elsif portal.current_language.code == "pt-PT" %}
+                Tampa com suporte autossustentável – apresentação
+                {% elsif portal.current_language.code == "ro" %}
+                Capac independent - unboxing
+                {% elsif portal.current_language.code == "sk" %}
+                Stojaci pokrievka - Unboxing
+                {% elsif portal.current_language.code == "sl" %}
+                Samostoječi pokrov – razpakiranje
+                {% elsif portal.current_language.code == "sv-SE" %}
+                Stående lock – Uppackning
+                {% endif %}
+              </h3>
+            </div>
+          </div>
+
+          <div class="content swiper-slide">
+            <video controls playsinline id="video5" class="product-video" poster="https://dl.dropboxusercontent.com/s/dhg8o9ya0txg8tkf7aesg/Standing-Lid-Specifications.png?rlkey=m68yj9q9ciwtv2fwsfkn5g2jh&st=uyfacz84&dl=0">
+              <source src="https://dl.dropboxusercontent.com/s/tli5b0cj7af3ung5eh44l/Lid-Specs.mp4?rlkey=owxxtuytrdgi571fkmdd44hdg&st=mupu5i2d&dl=0" type="video/mp4">
+            </video>
+            <div class="text-content">
+              <h3>
+                {% if portal.current_language.code == "en" %}
+                Standing Lid - Specifications
+                {% elsif portal.current_language.code == "de" %}
+                Stehender Deckel – Technische Daten
+                {% elsif portal.current_language.code == "es" %}
+                Tapa vertical - Especificaciones
+                {% elsif portal.current_language.code == "fr" %}
+                Couvercle sur pied - Caractéristiques
+                {% elsif portal.current_language.code == "he" %}
+                מכסה עומד - מפרטים
+                {% elsif portal.current_language.code == "hr" %}
+                Stajaći poklopac – specifikacije
+                {% elsif portal.current_language.code == "hu" %}
+                Álló fedél – Műszaki adatok
+                {% elsif portal.current_language.code == "it" %}
+                Coperchio con supporto - specifiche
+                {% elsif portal.current_language.code == "nb-NO" %}
+                Stående lokk – spesifikasjoner
+                {% elsif portal.current_language.code == "pl" %}
+                Stojąca pokrywka – specyfikacja
+                {% elsif portal.current_language.code == "pt-PT" %}
+                Tampa com suporte autossustentável – especificações
+                {% elsif portal.current_language.code == "ro" %}
+                Capac independent – specificații
+                {% elsif portal.current_language.code == "sk" %}
+                Stojaci pokrievka - Špecifikácie
+                {% elsif portal.current_language.code == "sl" %}
+                Samostoječi pokrov – specifikacije
+                {% elsif portal.current_language.code == "sv-SE" %}
+                Stående lock – Specifikationer
+                {% endif %}
+              </h3>
+            </div>
+          </div>
+
+          <div class="content swiper-slide">
+            <video controls playsinline id="video6" class="product-video" poster="https://dl.dropboxusercontent.com/s/f1h9aduvghammw9po70p9/Utensils-Set-Unboxing.png?rlkey=ewg8lsyh9um5cu1nrcrwaptmb&st=o8mepmxe&dl=0">
+              <source src="https://dl.dropboxusercontent.com/s/rmude2bvlqu0q9ywwgwrz/Utensils-Set-Unboxing.mp4?rlkey=aztwf1ym33w5vqvr1fanm5eu3&st=sdbdpn6w&dl=0" type="video/mp4">
+            </video>
+            <div class="text-content">
+              <h3>
+                {% if portal.current_language.code == "en" %}
+                Utensils Set - Unboxing
+                {% elsif portal.current_language.code == "de" %}
+                Utensilien-Set – Auspacken
+                {% elsif portal.current_language.code == "es" %}
+                Juego de utensilios - Desempaquetado
+                {% elsif portal.current_language.code == "fr" %}
+                Ensemble d’ustensiles - Déballage
+                {% elsif portal.current_language.code == "he" %}
+                כלי אוכל - פתיחת האריזה
+                {% elsif portal.current_language.code == "hr" %}
+                Komplet pribora za jelo – raspakiranje
+                {% elsif portal.current_language.code == "hu" %}
+                Eszközkészlet – Kicsomagolás
+                {% elsif portal.current_language.code == "it" %}
+                Set di utensili - disimballaggio
+                {% elsif portal.current_language.code == "nb-NO" %}
+                Bestikksett – unboxing
+                {% elsif portal.current_language.code == "pl" %}
+                Zestaw przyborów kuchennych – rozpakowanie
+                {% elsif portal.current_language.code == "pt-PT" %}
+                Conjunto de utensílios de cozinha – apresentação
+                {% elsif portal.current_language.code == "ro" %}
+                Set de ustensile – unboxing
+                {% elsif portal.current_language.code == "sk" %}
+                Sada nástrojov - Unboxing
+                {% elsif portal.current_language.code == "sl" %}
+                Komplet kuhinjskih pripomočkov – razpakiranje
+                {% elsif portal.current_language.code == "sv-SE" %}
+                Köksredskapsset – Uppackning
+                {% endif %}
+              </h3>
+            </div>
+          </div>
+
+          <div class="content swiper-slide">
+            <video controls playsinline id="video7" class="product-video" poster="https://dl.dropboxusercontent.com/s/oxp44ia7m9wy3iyskfte2/Utensils-Set-Specifications.png?rlkey=kqlu2t67s7t3dcf4pfthjfo27&st=7vd73lgj&dl=0">
+              <source src="https://dl.dropboxusercontent.com/s/szx2z1cn15zcarxnfivb5/Utensils-Set-Specs.mp4?rlkey=qtwhpdtj9x6ecm0b79coim3ip&st=xhkio0k6&dl=0" type="video/mp4">
+            </video>
+            <div class="text-content">
+              <h3>
+                {% if portal.current_language.code == "en" %}
+                Utensils Set - Specifications
+                {% elsif portal.current_language.code == "de" %}
+                Utensilien-Set – Technische Daten
+                {% elsif portal.current_language.code == "es" %}
+                Juego de utensilios - Especificaciones
+                {% elsif portal.current_language.code == "fr" %}
+                Ensemble d’ustensiles - Caractéristiques
+                {% elsif portal.current_language.code == "he" %}
+                כלי אוכל - מפרטים
+                {% elsif portal.current_language.code == "hr" %}
+                Komplet pribora za jelo – specifikacije
+                {% elsif portal.current_language.code == "hu" %}
+                Edénykészlet – Műszaki adatok
+                {% elsif portal.current_language.code == "it" %}
+                Set di utensili - specifiche
+                {% elsif portal.current_language.code == "nb-NO" %}
+                Bestikksett – spesifikasjoner
+                {% elsif portal.current_language.code == "pl" %}
+                Zestaw przyborów kuchennych – specyfikacja
+                {% elsif portal.current_language.code == "pt-PT" %}
+                Conjunto de utensílios de cozinha – especificações
+                {% elsif portal.current_language.code == "ro" %}
+                Set de ustensile – specificații
+                {% elsif portal.current_language.code == "sk" %}
+                Sada nástrojov - Špecifikácie
+                {% elsif portal.current_language.code == "sl" %}
+                Komplet kuhinjskih pripomočkov – specifikacije
+                {% elsif portal.current_language.code == "sv-SE" %}
+                Köksredskapsset – Specifikationer
+                {% endif %}
+              </h3>
+            </div>
+          </div>
+
+          <div class="content swiper-slide">
+            <video controls playsinline id="video8" class="product-video" poster="https://dl.dropboxusercontent.com/s/si033ai6dpo4rs4kxm4ap/Heat-Protectant-Set-Unboxing.png?rlkey=vah4ibnlt0xig150vr72q0v3o&st=2nraf60a&dl=0">
+              <source src="https://dl.dropboxusercontent.com/s/b99bg951kq98fw1j3k1rf/Protectant-Set-Unboxing.mp4?rlkey=jlm9xje2gb6od9koyei0cb85b&st=wxncbfk0&dl=0" type="video/mp4">
+            </video>
+            <div class="text-content">
+              <h3>
+                {% if portal.current_language.code == "en" %}
+                Heat Protectant Set - Unboxing
+                {% elsif portal.current_language.code == "de" %}
+                Hitzeschutz-Set – Auspacken
+                {% elsif portal.current_language.code == "es" %}
+                Juego protector térmico - Desempaquetado
+                {% elsif portal.current_language.code == "fr" %}
+                Ensemble de protection thermique - Déballage
+                {% elsif portal.current_language.code == "he" %}
+                סט מגנים מפני חום - פתיחת האריזה
+                {% elsif portal.current_language.code == "hr" %}
+                Komplet za zaštitu od topline – raspakiranje
+                {% elsif portal.current_language.code == "hu" %}
+                Hővédő készlet - Kicsomagolás
+                {% elsif portal.current_language.code == "it" %}
+                Set di presine termoresistente - disimballaggio
+                {% elsif portal.current_language.code == "nb-NO" %}
+                Varmebeskyttende sett – unboxing
+                {% elsif portal.current_language.code == "pl" %}
+                Zestaw do ochrony przed wysoką temperaturą – rozpakowanie
+                {% elsif portal.current_language.code == "pt-PT" %}
+                Conjunto de protetores contra o calor – apresentação
+                {% elsif portal.current_language.code == "ro" %}
+                Set de protecție la cald – unboxing
+                {% elsif portal.current_language.code == "sk" %}
+                Sada na ochranu pred teplom - Unboxing
+                {% elsif portal.current_language.code == "sl" %}
+                Komplet za zaščito pred toploto – razpakiranje
+                {% elsif portal.current_language.code == "sv-SE" %}
+                Värmeskyddsset – Uppackning
+                {% endif %}
+              </h3>
+            </div>
+          </div>
+
+          <div class="content swiper-slide">
+            <video controls playsinline id="video9" class="product-video" poster="https://dl.dropboxusercontent.com/s/64pykibm17ca0b3nbet35/Heat-Protectant-Set-Specifications.png?rlkey=0c0ymgkgf7dnve5yj5h1jk6jk&st=n06l1jr8&dl=0">
+              <source src="https://dl.dropboxusercontent.com/s/y9w7zenfbs2eltq93qkpg/Protectant-Set-Specs.mp4?rlkey=dnoxe7wpkqwkc3e1uijvj5ofj&st=w47x6lhd&dl=0" type="video/mp4">
+            </video>
+            <div class="text-content">
+              <h3>
+                {% if portal.current_language.code == "en" %}
+                Heat Protectant Set - Specifications
+                {% elsif portal.current_language.code == "de" %}
+                Hitzeschutz-Set – Technische Daten
+                {% elsif portal.current_language.code == "es" %}
+                Juego protector térmico - Especificaciones
+                {% elsif portal.current_language.code == "fr" %}
+                Ensemble de protection thermique - Caractéristiques
+                {% elsif portal.current_language.code == "he" %}
+                סט מגנים מפני חום - מפרטים
+                {% elsif portal.current_language.code == "hr" %}
+                Komplet za zaštitu od topline – specifikacije
+                {% elsif portal.current_language.code == "hu" %}
+                Hővédő készlet - Műszaki adatok
+                {% elsif portal.current_language.code == "it" %}
+                Set di presine termoresistente - specifiche
+                {% elsif portal.current_language.code == "nb-NO" %}
+                Varmebeskyttende sett – spesifikasjoner
+                {% elsif portal.current_language.code == "pl" %}
+                Zestaw do ochrony przed wysoką temperaturą – specyfikacja
+                {% elsif portal.current_language.code == "pt-PT" %}
+                Conjunto de protetores contra o calor – especificações
+                {% elsif portal.current_language.code == "ro" %}
+                Set de protecție la cald – specificații
+                {% elsif portal.current_language.code == "sk" %}
+                Sada na ochranu pred teplom - Špecifikácie
+                {% elsif portal.current_language.code == "sl" %}
+                Komplet za zaščito pred toploto – specifikacije
+                {% elsif portal.current_language.code == "sv-SE" %}
+                Värmeskyddsset – Specifikationer
+                {% endif %}
+              </h3>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      loop: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 200,
+        modifier: 2.5,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      on: {
+        transitionEnd: function () {
+          updateVideoControls();
+        },
+        init: function () {
+          updateVideoControls();
+          addSlideClickListeners();
+        }
+      },
+    });
+
+    function updateVideoControls() {
+      var slides = document.querySelectorAll(".swiper-slide");
+      slides.forEach(function (slide) {
+        var video = slide.querySelector("video");
+        if (slide.classList.contains('swiper-slide-active')) {
+          video.controls = true;
+          // video.play();
+        } else {
+          video.controls = false;
+          video.pause();
+        }
+      });
+    }
+
+    function addSlideClickListeners() {
+      var slides = document.querySelectorAll(".swiper-slide");
+      slides.forEach(function (slide) {
+        slide.addEventListener('click', function () {
+          var clickedIndex = Array.prototype.indexOf.call(slides, slide);
+          var realIndex = slide.getAttribute('data-swiper-slide-index');
+          swiper.slideToLoop(realIndex);
+        });
+      });
+    }
+  </script>
+</section>
+
+<section class="container-fluid px-0 mb-64 mt-md-16">
+  <div class="container">
+    <section class="row br-12 mx-0 g-0">
+      <div class="row mx-0 fw-section-content g-0 upsell">
+        <h4 class="text-center">
+          {% if portal.current_language.code == "en" %}
+          Check Out What Else We Have In Store
+          {% elsif portal.current_language.code == "fr" %}
+          Découvrez Nos Autres Produits En Magasin
+          {% elsif portal.current_language.code == "fil" %}
+          Check Out What Else We Have In Store
+          {% elsif portal.current_language.code == "de" %}
+          Schauen Sie, was wir sonst noch im Laden haben
+          {% elsif portal.current_language.code == "ar" %}
+          تفقد ما لدينا منتجات أخرى في المتجر
+          {% elsif portal.current_language.code == "bg" %}
+          Разгледайте какво друго имаме на склад
+          {% elsif portal.current_language.code == "zh-CN" %}
+          请查看我们在商店里还有什么
+          {% elsif portal.current_language.code == "zh-TW" %}
+          查看我們在商店裡還有什麼
+          {% elsif portal.current_language.code == "hr" %}
+          Pogledajte što još imamo u trgovini
+          {% elsif portal.current_language.code == "cs" %}
+          Podívejte se, co máme v obchodě dalšího
+          {% elsif portal.current_language.code == "da" %}
+          Se, hvad vi ellers har i butikken
+          {% elsif portal.current_language.code == "fi" %}
+          Tutustu muihin tuotteisiimme myymälässä
+          {% elsif portal.current_language.code == "nl" %}
+          Bekijk wat we nog meer in de winkel hebben
+          {% elsif portal.current_language.code == "el" %}
+          Δείτε τι άλλο έχουμε στο κατάστημα
+          {% elsif portal.current_language.code == "he" %}
+          בדקו מה עוד יש לנו בחנות
+          {% elsif portal.current_language.code == "hu" %}
+          Tekintse meg, mi mást tartunk üzletünkben
+          {% elsif portal.current_language.code == "id" %}
+          Lihat apa lagi yang kami miliki di toko
+          {% elsif portal.current_language.code == "it" %}
+          Scopri cosa abbiamo in negozio
+          {% elsif portal.current_language.code == "ja-JP" %}
+          その他の取り扱い商品をチェックしてください
+          {% elsif portal.current_language.code == "ko" %}
+          저희가 상점에 또 무엇을 가지고 있는지 확인하세요
+          {% elsif portal.current_language.code == "ms" %}
+          Lihat apa lagi yang kami ada di kedai
+          {% elsif portal.current_language.code == "nb-NO" %}
+          Sjekk ut hva annet vi har i butikken
+          {% elsif portal.current_language.code == "pl" %}
+          Sprawdź, co jeszcze mamy w sklepie
+          {% elsif portal.current_language.code == "pt-BR" %}
+          Confira o que mais temos na loja
+          {% elsif portal.current_language.code == "pt-PT" %}
+          Veja o que mais temos na loja
+          {% elsif portal.current_language.code == "ro" %}
+          Vezi ce mai avem în magazin
+          {% elsif portal.current_language.code == "sk" %}
+          Pozrite si, čo máme ešte v obchode
+          {% elsif portal.current_language.code == "sl" %}
+          Poglejte, kaj imamo še v trgovini
+          {% elsif portal.current_language.code == "es" %}
+          Descubre qué más tenemos en la tienda
+          {% elsif portal.current_language.code == "sv-SE" %}
+          Kolla in vad annat vi har i butiken
+          {% elsif portal.current_language.code == "th" %}
+          ดูว่าเรามีสินค้าอื่นอะไรในร้าน
+          {% elsif portal.current_language.code == "tr" %}
+          Mağazamızda başka neler olduğuna göz atın
+          {% elsif portal.current_language.code == "uk" %}
+          Перегляньте, що ще у нас є в магазині
+          {% elsif portal.current_language.code == "vi" %}
+          Khám phá những sản phẩm khác chúng tôi có trong cửa hàng
+          {% endif %}
+        </h4>
+        <h2 class="text-center text-danger blink_text">
+          {% if portal.current_language.code == "en" %}
+          Save Up To 50%
+          {% elsif portal.current_language.code == "fr" %}
+          Économisez jusqu'à 50%
+          {% elsif portal.current_language.code == "fil" %}
+          Save Up To 50%
+          {% elsif portal.current_language.code == "de" %}
+          Sparen Sie bis zu 50%
+          {% elsif portal.current_language.code == "ar" %}
+          احصل على خصم يصل إلى 50%
+          {% elsif portal.current_language.code == "bg" %}
+          Спестете до 50%
+          {% elsif portal.current_language.code == "zh-CN" %}
+          最高可省50%
+          {% elsif portal.current_language.code == "zh-TW" %}
+          最高可省50%
+          {% elsif portal.current_language.code == "hr" %}
+          Uštedite do 50%
+          {% elsif portal.current_language.code == "cs" %}
+          Ušetřete až 50%
+          {% elsif portal.current_language.code == "da" %}
+          Spar op til 50%
+          {% elsif portal.current_language.code == "fi" %}
+          Säästä jopa 50%
+          {% elsif portal.current_language.code == "nl" %}
+          Bespaar tot 50%
+          {% elsif portal.current_language.code == "el" %}
+          Εξοικονομήστε έως και 50%
+          {% elsif portal.current_language.code == "he" %}
+          חסוך עד 50%
+          {% elsif portal.current_language.code == "hu" %}
+          A legfeljebb 50%-os megtakarítás
+          {% elsif portal.current_language.code == "id" %}
+          Simpan hingga 50%
+          {% elsif portal.current_language.code == "it" %}
+          Risparmia fino al 50%
+          {% elsif portal.current_language.code == "ja-JP" %}
+          最大50%オフ
+          {% elsif portal.current_language.code == "ko" %}
+          최대 50% 할인
+          {% elsif portal.current_language.code == "ms" %}
+          Jimat Sehingga 50%
+          {% elsif portal.current_language.code == "nb-NO" %} 
+          Spar opptil 50%
+          {% elsif portal.current_language.code == "pl" %}
+          Oszczędź do 50%
+          {% elsif portal.current_language.code == "pt-BR" %}
+          Economize até 50%
+          {% elsif portal.current_language.code == "pt-PT" %}
+          Economize até 50%
+          {% elsif portal.current_language.code == "ro" %}
+          Economisiți până la 50%
+          {% elsif portal.current_language.code == "sk" %}
+          Ušetrite až 50%
+          {% elsif portal.current_language.code == "sl" %}
+          Prihranite do 50%
+          {% elsif portal.current_language.code == "es" %}
+          Ahorra hasta 50%
+          {% elsif portal.current_language.code == "sv-SE" %}
+          Spara upp till 50%
+          {% elsif portal.current_language.code == "th" %}
+          ออมสูงสุด 50%
+          {% elsif portal.current_language.code == "tr" %}
+          %50'ye kadar tasarruf edin
+          {% elsif portal.current_language.code == "uk" %}
+          Зекономте до 50%
+          {% elsif portal.current_language.code == "vi" %}
+          Tiết kiệm lên đến 50%
+          {% endif %}
+        </h2>
+        <div class="col-md-2 fw-folder mx-auto">
+          <div class="fs-20 mb-12 mt-12">
+            <div class='fw-card-image text-center'>
+              <a href="https://emura-pan.com/emura-lid?vndr=supportshop" aria-label="Buy Emura standing lid" target="_blank">
+                <figure><img class="mb-8" alt="Stand-Up Lid for Hassle-Free cooking" src="https://emura-pan.com/theme/upsells/get-emura-standing-lid/made-with/product.png" /></figure>
+                <span>
+                  {% if portal.current_language.code == "en" %}
+                  Standing Lid
+                  {% elsif portal.current_language.code == "ar" %}
+                  غطاء القائم
+                  {% elsif portal.current_language.code == "bg" %}
+                  Стоящ капак
+                  {% elsif portal.current_language.code == "cs" %}
+                  Stojací víko
+                  {% elsif portal.current_language.code == "de" %}
+                  Stehender Deckel
+                  {% elsif portal.current_language.code == "el" %}
+                  Όρθιο Καπάκι
+                  {% elsif portal.current_language.code == "es" %}
+                  Tapa vertical
+                  {% elsif portal.current_language.code == "fi" %}
+                  Kansi
+                  {% elsif portal.current_language.code == "fil" %}
+                  Standing Lid
+                  {% elsif portal.current_language.code == "fr" %}
+                  Couvercle droit
+                  {% elsif portal.current_language.code == "he" %}
+                  מכסה עומד
+                  {% elsif portal.current_language.code == "hr" %}
+                  Stajaći poklopac
+                  {% elsif portal.current_language.code == "hu" %}
+                  Álló fedél
+                  {% elsif portal.current_language.code == "id" %}
+                  Tutup Berdiri
+                  {% elsif portal.current_language.code == "it" %}
+                  Coperchio con supporto
+                  {% elsif portal.current_language.code == "ko" %}
+                  세워 놓을 수 있는 뚜껑
+                  {% elsif portal.current_language.code == "ms" %}
+                  Penutup Berdiri
+                  {% elsif portal.current_language.code == "nb-NO" %}
+                  Stående lokk
+                  {% elsif portal.current_language.code == "nl" %}
+                  Staande deksel
+                  {% elsif portal.current_language.code == "pl" %}
+                  Stojąca pokrywka
+                  {% elsif portal.current_language.code == "pt-BR" %}
+                  Tampa sustentável
+                  {% elsif portal.current_language.code == "pt-PT" %}
+                  Tampa com suporte autossustentável
+                  {% elsif portal.current_language.code == "ro" %}
+                  Capac independent
+                  {% elsif portal.current_language.code == "sk" %}
+                  Stojaci pokrievka
+                  {% elsif portal.current_language.code == "sl" %}
+                  Samostoječi pokrov
+                  {% elsif portal.current_language.code == "sv-SE" %}
+                  Stående lock
+                  {% elsif portal.current_language.code == "th" %}
+                  ฝายืนได้
+                  {% elsif portal.current_language.code == "tr" %}
+                  Ayaklı Kapak
+                  {% elsif portal.current_language.code == "uk" %}
+                  Вертикальна кришка
+                  {% elsif portal.current_language.code == "vi" %}
+                  Nắp Đứng
+                  {% elsif portal.current_language.code == "zh-CN" %}
+                  立盖
+                  {% elsif portal.current_language.code == "zh-TW" %}
+                  立蓋
+                  {% endif %}
+                </span></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 fw-folder mx-auto">
+          <div class="fs-20 mb-12 mt-12">
+            <div class='fw-card-image text-center'>
+              <a href="https://emura-pan.com/emura-utensils/product?vndr=supportshop" aria-label="Buy Emura utensils set" target="_blank">
+                <figure><img class="mb-8" alt="5 Durable Silicone Quality Kitchen Utensils" src="https://emura-pan.com/theme/emura-utensils/product/product.png" /></figure>
+                <span>
+                  {% if portal.current_language.code == "en" %}
+                  Utensils
+                  {% elsif portal.current_language.code == "de" %}
+                  Utensilien
+                  {% elsif portal.current_language.code == "es" %}
+                  Utensilios
+                  {% elsif portal.current_language.code == "fr" %}
+                  Ustensiles
+                  {% elsif portal.current_language.code == "he" %}
+                  כלי אוכל
+                  {% elsif portal.current_language.code == "hr" %}
+                  Pribor za jelo
+                  {% elsif portal.current_language.code == "hu" %}
+                  Eszközök
+                  {% elsif portal.current_language.code == "it" %}
+                  Utensili
+                  {% elsif portal.current_language.code == "nb-NO" %}
+                  Bestikk
+                  {% elsif portal.current_language.code == "pl" %}
+                  Przybory kuchenne
+                  {% elsif portal.current_language.code == "pt-PT" %}
+                  Utensílios de cozinha
+                  {% elsif portal.current_language.code == "ro" %}
+                  Ustensile
+                  {% elsif portal.current_language.code == "sk" %}
+                  Nástroje
+                  {% elsif portal.current_language.code == "sl" %}
+                  Kuhinjski pripomočki
+                  {% elsif portal.current_language.code == "sv-SE" %}
+                  Köksredskap
+                  {% endif %}
+                </span></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 fw-folder mx-auto">
+          <div class="fs-20 mb-12 mt-12">
+            <div class='fw-card-image text-center'>
+              <a href="https://emura-pan.com/emura-protectant-set/product?vndr=supportshop" aria-label="Buy Kitchen Protectant Set" target="_blank">
+                <figure><img class="mb-8" alt="Heat-resistant, non-slip. Set includes trinket and glove." src="https://emura-pan.com/theme/emura-protectant-set/product/set.png" /></figure>
+                <span>
+                  {% if portal.current_language.code == "en" %}
+                  Heat Protection Set
+                  {% elsif portal.current_language.code == "de" %}
+                  Hitzeschutz-Set
+                  {% elsif portal.current_language.code == "es" %}
+                  Juego protector térmico
+                  {% elsif portal.current_language.code == "fr" %}
+                  Ensemble de protection thermique
+                  {% elsif portal.current_language.code == "he" %}
+                  סט מגנים מפני חום
+                  {% elsif portal.current_language.code == "hr" %}
+                  Komplet za zaštitu od topline
+                  {% elsif portal.current_language.code == "hu" %}
+                  Hővédő készlet
+                  {% elsif portal.current_language.code == "it" %}
+                  Set di presine termoresistente
+                  {% elsif portal.current_language.code == "nb-NO" %}
+                  Varmebeskyttende sett
+                  {% elsif portal.current_language.code == "pl" %}
+                  Zestaw do ochrony przed wysoką temperaturą
+                  {% elsif portal.current_language.code == "pt-PT" %}
+                  Conjunto de proteção contra o calor
+                  {% elsif portal.current_language.code == "ro" %}
+                  Set de protecție la cald
+                  {% elsif portal.current_language.code == "sk" %}
+                  Sada na ochranu pred teplom
+                  {% elsif portal.current_language.code == "sl" %}
+                  Komplet za zaščito pred toploto
+                  {% elsif portal.current_language.code == "sv-SE" %}
+                  Värmeskyddsset
+                  {% endif %}
+                </span></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 fw-folder mx-auto">
+          <div class="fs-20 mb-12 mt-12">
+            <div class='fw-card-image text-center'>
+              <a href="https://emura.com/emura-steamer-fryer-set/product?vndr=supportshop" aria-label="Buy Steamer Set" target="_blank">
+                <figure><img class="mb-8" alt="Frying Rack & Steamer Set" src="https://emura.com/assets/theme/emura-steamer-fryer-set/product/product.png?q=80&fm=png&fit=max&s=f563018ef332f8644a311a51fb9e706f" /></figure>
+                <span>
+                  {% if portal.current_language.code == "en" %}
+                  Steamer Set
+                  {% elsif portal.current_language.code == "de" %}
+                  Dampfgarer-Set
+                  {% elsif portal.current_language.code == "es" %}
+                  Juego vaporizador
+                  {% elsif portal.current_language.code == "fr" %}
+                  Ensemble cuiseur vapeur
+                  {% elsif portal.current_language.code == "he" %}
+                  סט כלי אידוי
+                  {% elsif portal.current_language.code == "hr" %}
+                  Komplet za kuhanje na pari
+                  {% elsif portal.current_language.code == "hu" %}
+                  Gőzös készlet
+                  {% elsif portal.current_language.code == "it" %}
+                  Set per la cottura a vapore
+                  {% elsif portal.current_language.code == "nb-NO" %}
+                  Steamer-sett
+                  {% elsif portal.current_language.code == "pl" %}
+                  Zestaw do gotowania na parze
+                  {% elsif portal.current_language.code == "pt-PT" %}
+                  Conjunto para cozer a vapor
+                  {% elsif portal.current_language.code == "ro" %}
+                  Set aparat de aburi
+                  {% elsif portal.current_language.code == "sk" %}
+                  Sada na parenie
+                  {% elsif portal.current_language.code == "sl" %}
+                  Komplet za kuhanje na pari
+                  {% elsif portal.current_language.code == "sv-SE" %}
+                  Set för ångkokare
+                  {% endif %}
+                </span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+<!-- Support and Knowledge Base -->
+{% assign solutionCards = 1 %}
+{% assign solutionCardsLimit = 3 %}
+{% if portal.has_solutions and solutionCardsLimit != 0 %}
+<section class="container-fluid px-0 mb-64 mt-md-44">
+  <div class="container">
+    {{page_message}}
+    {% for category in portal.solution_categories %}
+    {% if category.folders_count > 0 %}
+    <section class="row br-12 mx-0 g-0">
+      <div class="col-12 fw-section-heading align-items-center">
+        <div class="info mb-12">
+          <h2 class="text-center"><a href="{{ portal.solutions_home_url }}">
+            {% if portal.current_language.code == "en" %}
+            Support and Knowledge Base
+            {% elsif portal.current_language.code == "fr" %}
+            Assistance et base de connaissances
+            {% elsif portal.current_language.code == "fil" %}
+            Suporta at Base ng Kaalaman
+            {% elsif portal.current_language.code == "de" %}
+            Support und Wissensdatenbank
+            {% elsif portal.current_language.code == "ar" %}
+            الدعم والمعرفة
+            {% elsif portal.current_language.code == "bg" %}
+            Поддръжка и база знания
+            {% elsif portal.current_language.code == "zh-CN" %}
+            支持和知识库
+            {% elsif portal.current_language.code == "zh-TW" %}
+            支持和知識庫
+            {% elsif portal.current_language.code == "hr" %}
+            Podrška i baza znanja
+            {% elsif portal.current_language.code == "cs" %}
+            Podpora a znalostní báze
+            {% elsif portal.current_language.code == "da" %}
+            Support og vidensbase
+            {% elsif portal.current_language.code == "fi" %}
+            Tuki- ja tietokanta
+            {% elsif portal.current_language.code == "nl" %}
+            Ondersteuning en kennisbank
+            {% elsif portal.current_language.code == "el" %}
+            Υποστήριξη και Γνωσιακή Βάση
+            {% elsif portal.current_language.code == "he" %}
+            תמיכה ומאגר ידע
+            {% elsif portal.current_language.code == "hu" %}
+            Támogatás és tudásbázis
+            {% elsif portal.current_language.code == "id" %}
+            Dukungan dan Basis Pengetahuan
+            {% elsif portal.current_language.code == "it" %}
+            Supporto e base di conoscenza
+            {% elsif portal.current_language.code == "ja-JP" %}
+            サポートとナレッジベース
+            {% elsif portal.current_language.code == "ko" %}
+            지원 및 기술 자료
+            {% elsif portal.current_language.code == "ms" %}
+            Sokongan dan Pangkalan Pengetahuan
+            {% elsif portal.current_language.code == "nb-NO" %}
+            Støtte og kunnskapsbase
+            {% elsif portal.current_language.code == "pl" %}
+            Wsparcie i baza wiedzy
+            {% elsif portal.current_language.code == "pt-BR" %}
+            Suporte e Base de Conhecimento
+            {% elsif portal.current_language.code == "pt-PT" %}
+            Suporte e Base de Conhecimento
+            {% elsif portal.current_language.code == "ro" %}
+            Suport și bază de cunoștințe
+            {% elsif portal.current_language.code == "sk" %}
+            Podpora a znalostná základňa
+            {% elsif portal.current_language.code == "sl" %}
+            Podpora in baza znanja
+            {% elsif portal.current_language.code == "es" %}
+            Soporte y base de conocimientos
+            {% elsif portal.current_language.code == "sv-SE" %}
+            Support och kunskapsbas
+            {% elsif portal.current_language.code == "th" %}
+            การสนับสนุนและฐานความรู้
+            {% elsif portal.current_language.code == "tr" %}
+            Destek ve Bilgi Bankası
+            {% elsif portal.current_language.code == "uk" %}
+            Підтримка та база знань
+            {% elsif portal.current_language.code == "vi" %}
+            Cơ sở hỗ trợ và kiến ​​thức
+            {% endif %}
+            </a></h2>
+          <p class="title-underline"></p>
+        </div>
+      </div>
+
+      <div class="row mx-0 fw-section-content g-0">
+        {% for folder in category.folders %}
+        {% if folder.entity_collection.size > 0 %}
+        <div class="col-md-3 fw-folder">
+          <div class="fs-18 mb-12 mt-12">
+            {% element 'link' %}
+            {
+            "url": "{{ folder.url }}",
+            "class": "fw-heading d-flex",
+            "content": "<div class='card fw-card-display'> {{ folder.name | escape_once }}</div>",
+            "other_attributes": [{ "key":"role", "value":"heading" }]
+            }
+            {% endelement %}
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% assign forumCards = 1 %}
+{% assign forumCardsLimit = 3 %}
+{% if portal.has_forums and forumCardsLimit != 0 %}
+<section class="container-fluid px-0 pb-60">
+  <div class="container">
+    <div class="fw-section-heading text-center mt-28 mt-md-44 mb-24 mb-md-16">
+      <h2>{{ 'portal_translations.home.forums' | t }}</h2>
+      <a href="{{ portal.discussions_home_url }}">{{ 'portal_translations.home.view_topics' | t }}</a>
+    </div>
+    <div class="row justify-content-center">
+      {% for category in portal.forum_categories %}
+      {% if forumCards > forumCardsLimit %}{% break %}{% endif %}
+      {% if category.forums_count > 0 %}
+      {% for forum in category.forums %}
+      {% assign forumCards = forumCards | plus:1 %}
+      <div class="col-md-4 col-xl-3 mb-8">
+        <a class="card h-100" href="{{ category.url }}" aria-label="{{ category.name | escape_once }}">
+          <div class="card-body">
+            <p class="mt-0 card-title fs-18 line-clamp-2">{{ category.name | escape_once }}</p>
+            <p class="line-clamp-2">{{ category.description | escape_once }}</p>
+          </div>
+        </a>
+      </div>
+      {% break %}
+      {% endfor %}
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="container-fluid px-0 pt-45 pb-44 bg-light">
+  <div class="container">
+    {% if portal.has_solutions %}
+    {% assign articles = portal | popular_articles:6 %}
+    {% if articles.size > 0 %}
+    <div class="col-xl-12 mx-auto mb-8">
+      <div class="fw-section-heading row mb-8">
+        <div class="col-md-12 text-center text-lg-start">
+          <h4>
+            {% if portal.current_language.code == "en" %}
+            Recent Articles
+            {% elsif portal.current_language.code == "fr" %}
+            Articles récents
+            {% elsif portal.current_language.code == "fil" %}
+            Mga nakaraang artikulo
+            {% elsif portal.current_language.code == "de" %}
+            Aktuelle Artikel
+            {% elsif portal.current_language.code == "ar" %}
+            المقالات الأخيرة
+            {% elsif portal.current_language.code == "bg" %}
+            Последни статии
+            {% elsif portal.current_language.code == "zh-CN" %}
+            最近的文章
+            {% elsif portal.current_language.code == "zh-TW" %}
+            最近的文章
+            {% elsif portal.current_language.code == "hr" %}
+            Nedavni članci
+            {% elsif portal.current_language.code == "cs" %}
+            poslední články
+            {% elsif portal.current_language.code == "da" %}
+            Seneste artikler
+            {% elsif portal.current_language.code == "fi" %}
+            Viimeisimmät artikkelit
+            {% elsif portal.current_language.code == "nl" %}
+            recente artikelen
+            {% elsif portal.current_language.code == "el" %}
+            Πρόσφατα Άρθρα
+            {% elsif portal.current_language.code == "he" %}
+            מאמרים אחרונים
+            {% elsif portal.current_language.code == "hu" %}
+            friss cikkek
+            {% elsif portal.current_language.code == "id" %}
+            artikel Terbaru
+            {% elsif portal.current_language.code == "it" %}
+            Articoli recenti
+            {% elsif portal.current_language.code == "ja-JP" %}
+            最近の記事
+            {% elsif portal.current_language.code == "ko" %}
+            최근 기사
+            {% elsif portal.current_language.code == "ms" %}
+            Artikel Terkini
+            {% elsif portal.current_language.code == "nb-NO" %}
+            Nylige artikler
+            {% elsif portal.current_language.code == "pl" %}
+            Ostatnie Artykuły
+            {% elsif portal.current_language.code == "pt-BR" %}
+            Artigos recentes
+            {% elsif portal.current_language.code == "pt-PT" %}
+            Artigos recentes
+            {% elsif portal.current_language.code == "ro" %}
+            Articole recente
+            {% elsif portal.current_language.code == "sk" %}
+            Najnovšie články
+            {% elsif portal.current_language.code == "sl" %}
+            Nedavni članki
+            {% elsif portal.current_language.code == "es" %}
+            Artículos Recientes
+            {% elsif portal.current_language.code == "sv-SE" %}
+            senaste artiklar
+            {% elsif portal.current_language.code == "th" %}
+            บทความล่าสุด
+            {% elsif portal.current_language.code == "tr" %}
+            son Makaleler
+            {% elsif portal.current_language.code == "uk" %}
+            Останні статті
+            {% elsif portal.current_language.code == "vi" %}
+            Bài viết gần đây
+            {% endif %}
+          </h4>
+        </div>
+      </div>
+      <div class="">
+        <div class="row">
+          {% for article in articles %}
+          <a class="col-md-4 fw-article-info d-flex" href="{{article.url}}" aria-label='{{ 'portal_translations.home.url-aria-label' | t }}'>
+            <div class="pt-4 pe-8"><span class="icon-article pr-8"></span></div>
+            <div>
+              <p class="fs-18 line-clamp-2">{{article.title"}}</p>
+            </div>
+            <p></p>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% endif %}
+
+    {% if portal.has_forums %}
+    {% assign topics = portal.most_viewed_topics %}
+    {% if topics.size > 0 %}
+    <div class="col-xl-9 mx-auto">
+      <div class="fw-section-heading row mb-16">
+        <div class="col-md-8  text-center text-lg-start">
+          <h4>{{ 'portal_translations.home.treanding_topics' | t }}</h4>
+        </div>
+        <div class="col-md-4 text-center text-end">
+          <a href="{{portal.discussions_home_url}}">{{ 'portal_translations.home.view_topics' | t }}</a>
+        </div>
+      </div>
+      <div class="fw-articles odd-count">
+        <div class="row">
+          {% for topic in topics limit:4 %}
+          <a class="col-md-6 fw-article-info d-flex" href="{{topic.topic_url}}" aria-label="{% translate portal_translations.home.url-aria-label %}">
+            <div class="pt-4 pe-8"><span class="icon-topic pe-8"></span></div>
+            <div>
+              <p class="fs-18 semi-bold line-clamp-2">{{ topic.title | escape_once }}</p>
+              <p class="line-clamp-2 fw-meta-info">{% translate portal_translations.home.topic.created_on %} {{topic.created_on_strftime}} {% translate portal_translations.home.topic.by %} {{topic.author_name}}</p>
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% endif %}
+  </div>
+</section>
+
+<section class="container-fluid px-0 bg-light">
+  <div class="product-3__grey_bg">
+    <div class="d-flex flex-wrap container py-3">
+      <div class="d-flex align-items-center w-100 row no-gutters">
+        <div class="col-12 col-md text-center">
+          <div class="feat-items">
+            <div class="ico mb-8">
+              <svg class="tw-inline tw-h-[3rem]" fill="none" height="50" viewBox="0 0 34 33" width="50" xmlns="http://www.w3.org/2000/svg"><path d="m8.49882 26.5877-.50197-.4846c-1.35877-1.3069-2.52714-2.7262-3.49646-4.2321-.96931 1.5059-2.13768 2.9252-3.49646 4.2321l-1.00393-1.0472c1.46263-1.4107 2.69158-2.9513 3.66955-4.5956-1.67034-3.0551-2.55311-6.4044-2.55311-9.823 0-5.2447 1.33281-8.6373 3.38395-8.6373s3.38395 3.3926 3.38395 8.6373c0 3.4186-.88277 6.7679-2.5531 9.823.86546 1.4453 1.92132 2.8214 3.16758 4.0936 1.23761-1.2722 2.30208-2.6483 3.15898-4.0936-1.67039-3.0551-2.55316-6.4044-2.55316-9.823 0-5.2447 1.33286-8.6373 3.38396-8.6373s3.3839 3.3926 3.3839 8.6373c0 3.4186-.8827 6.7679-2.5531 9.823.8655 1.4453 1.9214 2.8214 3.1676 4.0936 1.2376-1.2722 2.3021-2.6483 3.1589-4.0936-1.6703-3.0551-2.5531-6.4044-2.5531-9.823 0-5.2447 1.3328-8.6373 3.384-8.6373 2.0511 0 3.3839 3.3926 3.3839 8.6373 0 3.4186-.8827 6.7679-2.5531 9.823.8655 1.4453 1.9214 2.8214 3.159 4.0936 1.2376-1.2722 2.3021-2.6483 3.1675-4.0936-1.6703-3.0551-2.5531-6.4044-2.5531-9.823 0-5.2447 1.3328-8.6373 3.384-8.6373 2.0511 0 3.3839 3.3926 3.3839 8.6373 0 3.4186-.8827 6.7679-2.5531 9.823.978 1.6443 2.207 3.1849 3.6696 4.5956l-1.004 1.0472c-1.3587-1.3069-2.5271-2.7262-3.4964-4.2321-.9693 1.5059-2.1377 2.9252-3.4965 4.2321l-.5019.4846-.502-.4846c-1.3588-1.3069-2.5271-2.7262-3.4965-4.2321-.9693 1.5059-2.1376 2.9252-3.4964 4.2321l-.502.4846-.502-.4846c-1.3587-1.3069-2.5271-2.7262-3.4964-4.2321-.9693 1.5059-2.1377 2.9252-3.49648 4.2321l-.50196.4846zm20.00078-23.13373c-.5193 0-1.93 1.70496-1.93 7.18333 0 2.856.6664 5.6688 1.93 8.2738 1.2636-2.605 1.93-5.4178 1.93-8.2738 0-5.47837-1.4194-7.18333-1.93-7.18333zm-7.9968 0c-.5193 0-1.93 1.70496-1.93 7.18333 0 2.856.6664 5.6688 1.93 8.2738 1.2635-2.6137 1.9299-5.4178 1.9299-8.2738 0-5.47837-1.4193-7.18333-1.9299-7.18333zm-7.9969 0c-.5193 0-1.93 1.70496-1.93 7.18333 0 2.856.6664 5.6688 1.93 8.2738 1.2636-2.605 1.93-5.4178 1.93-8.2738 0-5.47837-1.4194-7.18333-1.93-7.18333zm-7.99685 0c-.51928 0-1.92998 1.70496-1.92998 7.18333 0 2.856.66641 5.6688 1.92998 8.2738 1.26357-2.605 1.92997-5.4178 1.92997-8.2738 0-5.48703-1.41935-7.18333-1.93863-7.18333z" fill="#000"></path></svg>
+            </div>
+            <p><b>
+              {% if portal.current_language.code == "en" %}
+              Induction
+              {% elsif portal.current_language.code == "fr" %}
+              Induction
+              {% elsif portal.current_language.code == "fil" %}
+              Induksiyon
+              {% elsif portal.current_language.code == "de" %}
+              Induktion
+              {% elsif portal.current_language.code == "ar" %}
+              التحريض
+              {% elsif portal.current_language.code == "bg" %}
+              Индукция
+              {% elsif portal.current_language.code == "zh-CN" %}
+              感应
+              {% elsif portal.current_language.code == "zh-TW" %}
+              感應
+              {% elsif portal.current_language.code == "hr" %}
+              Indukcija
+              {% elsif portal.current_language.code == "cs" %}
+              Indukce
+              {% elsif portal.current_language.code == "da" %}
+              Induktion
+              {% elsif portal.current_language.code == "fi" %}
+              Induktio
+              {% elsif portal.current_language.code == "nl" %}
+              Inductie
+              {% elsif portal.current_language.code == "el" %}
+              Επαγωγή
+              {% elsif portal.current_language.code == "he" %}
+              אינדוקציה
+              {% elsif portal.current_language.code == "hu" %}
+              Indukció
+              {% elsif portal.current_language.code == "id" %}
+              Induksi
+              {% elsif portal.current_language.code == "it" %}
+              Induzione
+              {% elsif portal.current_language.code == "ja-JP" %}
+              誘導
+              {% elsif portal.current_language.code == "ko" %}
+              유도
+              {% elsif portal.current_language.code == "ms" %}
+              Induksi
+              {% elsif portal.current_language.code == "nb-NO" %}
+              Induksjon
+              {% elsif portal.current_language.code == "pl" %}
+              Indukcja
+              {% elsif portal.current_language.code == "pt-BR" %}
+              Indução
+              {% elsif portal.current_language.code == "pt-PT" %}
+              Indução
+              {% elsif portal.current_language.code == "ro" %}
+              Inducție
+              {% elsif portal.current_language.code == "sk" %}
+              Indukcia
+              {% elsif portal.current_language.code == "sl" %}
+              Indukcija
+              {% elsif portal.current_language.code == "es" %}
+              Inducción
+              {% elsif portal.current_language.code == "sv-SE" %}
+              Induktion
+              {% elsif portal.current_language.code == "th" %}
+              การบังคับเข้า
+              {% elsif portal.current_language.code == "tr" %}
+              İndüksiyon
+              {% elsif portal.current_language.code == "uk" %}
+              Індукція
+              {% elsif portal.current_language.code == "vi" %}
+              Từ trường
+              {% endif %}
+              </b></p>
+          </div>
+        </div>
+        <div class="col-12 col-md text-center">
+          <div class="feat-items">
+            <div class="ico mb-8">
+              <svg class="tw-inline tw-h-[3rem]" fill="none" height="50" viewBox="0 0 34 33" width="50" xmlns="http://www.w3.org/2000/svg"><path d="m7.44328 15.5081c.19838-1.9062.9574-3.6485 2.10455-5.063l1.02637 1.0264c-.89699 1.1385-1.49213 2.5186-1.67326 4.028h-1.45766zm3.13092 6.0118c-.89699-1.1386-1.49213-2.5186-1.67326-4.028h-1.45766c.19838 1.9062.9574 3.6485 2.10455 5.063l1.02637-1.0264zm1.3973-11.4457c1.1385-.89699 2.5186-1.49213 4.028-1.67326v-1.45766c-1.9062.19838-3.6485.9574-5.063 2.10455l1.0264 1.02637zm10.0397 12.8429c-1.1385.8971-2.5185 1.4922-4.0279 1.6733v1.4577c1.9061-.1984 3.6484-.9574 5.063-2.1046l-1.0264-1.0264zm-6.0117 1.6733c-1.5094-.1811-2.8895-.7762-4.028-1.6733l-1.0264 1.0264c1.4145 1.1472 3.1568 1.9062 5.063 2.1046v-1.4577zm9.0823-7.1071c-.1811 1.5094-.7763 2.8894-1.6733 4.0279l1.0264 1.0264c1.1472-1.4145 1.9062-3.1568 2.1046-5.063h-1.4577zm-7.1072-10.54002v1.45766c1.5095.18113 2.8895.77627 4.028 1.67326l1.0264-1.02637c-1.4145-1.14715-3.1568-1.90617-5.063-2.10455zm2.8464 7.11582c.276.4399.483.9229.6037 1.449h1.4749c-.1552-.9143-.5175-1.7595-1.035-2.4841l-1.0436 1.0437zm-7.6678 4.8732c-.276-.4399-.483-.9229-.6038-1.449h-1.4749c.1552.9142.5175 1.7595 1.035 2.484l1.0437-1.0436zm-.6038-3.4242c.1121-.5175.3191-1.0091.6038-1.449l-1.0437-1.0437c-.5175.7245-.8798 1.5698-1.035 2.4841h1.4749zm2.001-2.8463c.4399-.276.9229-.483 1.4491-.6038v-1.4749c-.9143.1553-1.7596.5175-2.4841 1.035l1.0437 1.0437zm3.4242-2.0701v1.475c.5176.1121 1.0092.3191 1.4491.6037l1.0436-1.0436c-.7245-.5175-1.5698-.8798-2.484-1.0351zm-1.9837 10.3417c-.5176-.1122-1.0092-.3192-1.4491-.6038l-1.0436 1.0436c.7245.5176 1.5698.8798 2.484 1.0351v-1.4749zm5.4252-3.4415c-.1121.5175-.3191 1.0091-.6038 1.449l1.0437 1.0437c.5175-.7245.8798-1.5698 1.035-2.4841h-1.4749zm1.9838-6.0118c.897 1.1386 1.4922 2.5186 1.6733 4.028h1.4576c-.1983-1.9062-.9574-3.6485-2.1045-5.063l-1.0264 1.0264zm-3.9848 8.8581c-.4399.276-.9229.483-1.4491.6038v1.4749c.9143-.1553 1.7596-.5175 2.4841-1.035l-1.0437-1.0437zm-1.4491-16.81912v1.44903c2.4496.20701 4.6835 1.18166 6.4603 2.68244l1.0264-1.0264c-2.0442-1.75954-4.6404-2.88944-7.4867-3.10507zm-12.30813 22.91712c-2.13043-2.4237-3.49321-5.5287-3.70884-8.9443h-1.44903c.224255 3.8123 1.75092 7.2797 4.14009 9.9707l1.0264-1.0264zm10.35023 5.1148c-3.4156-.2243-6.52064-1.5871-8.94432-3.7089l-1.0264 1.0264c2.69106 2.3892 6.15842 3.9072 9.97072 4.1401v-1.449zm-14.05907-16.0429c.22426-3.4156 1.58704-6.52064 3.70884-8.94432l-1.0264-1.0264c-2.38056 2.69106-3.907215 6.15842-4.13147 9.97072zm30.10197 1.9838c-.2243 3.4156-1.5871 6.5206-3.7089 8.9443l1.0264 1.0264c2.3892-2.691 3.9072-6.1584 4.1401-9.9707h-1.449zm-3.7089-10.92812c2.1305 2.42368 3.4932 5.52872 3.7089 8.94432h1.449c-.2243-3.8123-1.7509-7.27966-4.1401-9.97072l-1.0264 1.0264zm-1.3972 21.26972c-2.4237 2.1304-5.5288 3.4932-8.9444 3.7088v1.4491c3.8124-.2243 7.2797-1.7509 9.9708-4.1401l-1.0264-1.0264zm-19.88112-22.67563c2.42368-2.13043 5.52872-3.49321 8.94432-3.70884v-1.44903c-3.8123.224255-7.27966 1.75092-9.97072 4.14009l1.0264 1.0264zm18.78572 3.88134c1.5007 1.77679 2.4754 4.01069 2.6824 6.46029h1.449c-.2156-2.8463-1.3455-5.4425-3.105-7.48669zm-17.69895 14.91299c-1.50078-1.7768-2.47543-4.0107-2.68244-6.4603h-1.44903c.21563 2.8463 1.34553 5.4425 3.10507 7.4867zm7.85755 4.0797c-2.4496-.207-4.6835-1.1817-6.46027-2.6824l-1.0264 1.0264c2.04417 1.7595 4.64037 2.8894 7.48667 3.105zm-10.53999-12.5238c.20701-2.4496 1.18166-4.6835 2.68244-6.46027l-1.0264-1.0264c-1.75954 2.04417-2.88944 4.64037-3.10507 7.48667zm4.07972-7.85755c1.77677-1.50078 4.01067-2.47543 6.46027-2.68244v-1.44903c-2.8463.21563-5.4425 1.34553-7.48667 3.10507zm14.90437 17.70755c-1.7768 1.5008-4.0107 2.4754-6.4603 2.6824v1.449c2.8463-.2156 5.4425-1.3455 7.4867-3.105zm-6.4603-25.3581v1.44903c3.4156.22426 6.5206 1.58704 8.9443 3.70884l1.0264-1.0264c-2.691-2.38056-6.1584-3.907215-9.9707-4.13147zm10.54 17.4919c-.207 2.4496-1.1817 4.6835-2.6824 6.4603l1.0264 1.0264c1.7595-2.0442 2.8894-4.6404 3.105-7.4867z" fill="#000"></path></svg>
+            </div>
+            <p><b>
+              {% if portal.current_language.code == "en" %}
+              Ceramic
+              {% elsif portal.current_language.code == "fr" %}
+              Céramique
+              {% elsif portal.current_language.code == "fil" %}
+              Seramika
+              {% elsif portal.current_language.code == "de" %}
+              Keramik
+              {% elsif portal.current_language.code == "ar" %}
+              سيراميك
+              {% elsif portal.current_language.code == "bg" %}
+              Керамика
+              {% elsif portal.current_language.code == "zh-CN" %}
+              陶瓷
+              {% elsif portal.current_language.code == "zh-TW" %}
+              陶瓷
+              {% elsif portal.current_language.code == "hr" %}
+              Keramika
+              {% elsif portal.current_language.code == "cs" %}
+              Keramika
+              {% elsif portal.current_language.code == "da" %}
+              Keramik
+              {% elsif portal.current_language.code == "fi" %}
+              Keramiikka
+              {% elsif portal.current_language.code == "nl" %}
+              Keramiek
+              {% elsif portal.current_language.code == "el" %}
+              Κεραμικά
+              {% elsif portal.current_language.code == "he" %}
+              קרמיקה
+              {% elsif portal.current_language.code == "hu" %}
+              Kerámia
+              {% elsif portal.current_language.code == "id" %}
+              Keramik
+              {% elsif portal.current_language.code == "it" %}
+              Ceramica
+              {% elsif portal.current_language.code == "ja-JP" %}
+              セラミック
+              {% elsif portal.current_language.code == "ko" %}
+              세라믹
+              {% elsif portal.current_language.code == "ms" %}
+              Seramik
+              {% elsif portal.current_language.code == "nb-NO" %}
+              Keramikk
+              {% elsif portal.current_language.code == "pl" %}
+              Ceramika
+              {% elsif portal.current_language.code == "pt-BR" %}
+              Cerâmica
+              {% elsif portal.current_language.code == "pt-PT" %}
+              Cerâmica
+              {% elsif portal.current_language.code == "ro" %}
+              Ceramică
+              {% elsif portal.current_language.code == "sk" %}
+              Keramika
+              {% elsif portal.current_language.code == "sl" %}
+              Keramika
+              {% elsif portal.current_language.code == "es" %}
+              Cerámica
+              {% elsif portal.current_language.code == "sv-SE" %}
+              Keramik
+              {% elsif portal.current_language.code == "th" %}
+              เซรามิก
+              {% elsif portal.current_language.code == "tr" %}
+              Seramik
+              {% elsif portal.current_language.code == "uk" %}
+              Кераміка
+              {% elsif portal.current_language.code == "vi" %}
+              Gốm sứ
+              {% endif %}
+              </b></p>
+          </div>
+        </div>
+        <div class="col-12 col-md text-center">
+          <div class="feat-items">
+            <div class="ico mb-8">
+              <svg class="tw-inline tw-h-[3rem]" fill="none" height="50" viewBox="0 0 34 33" width="50" xmlns="http://www.w3.org/2000/svg"><path d="m12.8133 6.56569c.5411-2.59197 3.0759-3.9356 4.0158-6.56569 1.6899 1.83916 3.076 3.58302 3.7215 6.02252.4652 1.74387.1994 4.12618-2.6772 5.77478.3513-1.3913.2469-4.72655-1.3861-5.82242-1.7848 2.28703-.7974 6.02252-.7974 6.02252-2.1361-.5432-3.3228-3.3829-2.8766-5.42218zm14.5538 2.3728c.4367 2.66821-.826 4.31681-1.5855 5.03151 1.9083-.0763 5.0887-2.0679 5.3355-4.1834.2089-1.76292.1139-4.12619.4652-5.50794-1.9842-.2287-4.557-.3907-6.3133 1.4294-2.3544 2.44903-2.1171 6.64194-2.1171 6.64194.693-.5241 1.7184-3.33527 4.2057-3.40198zm-23.5633 3.96421c.63607.4479 3.16139 1.3913 3.66455 1.5056 0 0-1.60443-3.3257-1.48101-5.15534 2.18355.20012 4.15826 3.44004 4.16776 3.40194.1519-.0953.7405-3.01124-.55067-4.98381-.71202-1.07681-2.37342-2.1155-3.51266-2.67773-.93038-.45741-2.75316-.84811-3.56962-1.41987.0095.15247-.09493 5.76523-.11392 6.27029-.05696 1.25782.36076 2.35372 1.38607 3.05892zm29.6962 11.4733c0 4.8409-7.2437 8.6335-16.5 8.6335-9.25633 0-16.5-3.8022-16.5-8.6335 0-2.1727 1.46203-4.1357 3.9019-5.6318.93038-3.2305 6.1234-5.6319 12.5981-5.6319s11.6677 2.4014 12.5981 5.6319c2.4399 1.5056 3.9019 3.4591 3.9019 5.6318zm-28.00633-4.5932c0 2.9446 5.26903 5.4222 11.50633 5.4222s11.5063-2.4871 11.5063-5.4222c0-2.935-5.269-5.4221-11.5063-5.4221s-11.50633 2.4871-11.50633 5.4221zm20.06963 4.5646-2.7342 1.0006.3418.9338 2.7342-1.0005zm-10.0253 1.6962v1.0006h2.9145v-1.0006zm-7.11078-1.6962-.34178.9339 2.73416 1.0005.3418-.9338zm23.47788.0286c0-1.3341-.845-2.6015-2.2785-3.6783 0 .019 0 .0381-.0095.0571.0854.2954.1329.5909.1329.9053 0 3.5068-5.7057 6.3561-12.7405 6.3561-7.03482 0-12.74051-2.8493-12.74051-6.3561 0-.3049.04747-.6099.13291-.9053 0-.019 0-.0381-.00949-.0571-1.44304 1.0768-2.27849 2.3442-2.27849 3.6783 0 3.8117 6.82595 7.0326 14.90508 7.0326 8.0791 0 14.905-3.2209 14.905-7.0326z" fill="#000"></path></svg>
+            </div>
+            <p><b>
+              {% if portal.current_language.code == "en" %}
+              Gas
+              {% elsif portal.current_language.code == "fr" %}
+              Gaz
+              {% elsif portal.current_language.code == "fil" %}
+              Gaso
+              {% elsif portal.current_language.code == "de" %}
+              Gas
+              {% elsif portal.current_language.code == "ar" %}
+              غاز
+              {% elsif portal.current_language.code == "bg" %}
+              Газ
+              {% elsif portal.current_language.code == "zh-CN" %}
+              气体
+              {% elsif portal.current_language.code == "zh-TW" %}
+              氣體
+              {% elsif portal.current_language.code == "hr" %}
+              Plin
+              {% elsif portal.current_language.code == "cs" %}
+              Plyn
+              {% elsif portal.current_language.code == "da" %}
+              Gas
+              {% elsif portal.current_language.code == "fi" %}
+              Kaasu
+              {% elsif portal.current_language.code == "nl" %}
+              Gas
+              {% elsif portal.current_language.code == "el" %}
+              Αέριο
+              {% elsif portal.current_language.code == "he" %}
+              גז
+              {% elsif portal.current_language.code == "hu" %}
+              Gáz
+              {% elsif portal.current_language.code == "id" %}
+              Gas
+              {% elsif portal.current_language.code == "it" %}
+              Gas
+              {% elsif portal.current_language.code == "ja-JP" %}
+              ガス
+              {% elsif portal.current_language.code == "ko" %}
+              가스
+              {% elsif portal.current_language.code == "ms" %}
+              Gas
+              {% elsif portal.current_language.code == "nb-NO" %}
+              Gass
+              {% elsif portal.current_language.code == "pl" %}
+              Gaz
+              {% elsif portal.current_language.code == "pt-BR" %}
+              Gás
+              {% elsif portal.current_language.code == "pt-PT" %}
+              Gás
+              {% elsif portal.current_language.code == "ro" %}
+              Gaz
+              {% elsif portal.current_language.code == "sk" %}
+              Plyn
+              {% elsif portal.current_language.code == "sl" %}
+              Plin
+              {% elsif portal.current_language.code == "es" %}
+              Gas
+              {% elsif portal.current_language.code == "sv-SE" %}
+              Gas
+              {% elsif portal.current_language.code == "th" %}
+              ก๊าซ
+              {% elsif portal.current_language.code == "tr" %}
+              Gaz
+              {% elsif portal.current_language.code == "uk" %}
+              Газ
+              {% elsif portal.current_language.code == "vi" %}
+              Khí
+              {% endif %}
+              </b></p>
+          </div>
+        </div>
+        <div class="col-12 col-md text-center">
+          <div class="feat-items">
+            <div class="ico mb-8">
+              <svg class="tw-inline tw-h-[3rem]" fill="none" height="50" viewBox="0 0 34 33" width="50" xmlns="http://www.w3.org/2000/svg"><path d="m29.6979 13.6344c-.6857-1.2036-1.784-2.2851-3.2532-3.201-2.5326-1.56992-5.8907-2.4334-9.4517-2.4334s-6.9191.86348-9.45168 2.4334c-1.46917.9071-2.56756 1.9974-3.25317 3.201-2.1268 1.8665-3.28815 4.1604-3.28815 6.5939 0 2.9655 1.71404 5.7129 4.82728 7.7452 2.99432 1.945 6.96112 3.0265 11.17272 3.0265s8.1784-1.0728 11.1727-3.0265c3.1133-2.0236 4.8273-4.7797 4.8273-7.7452 0-2.4335-1.1613-4.7274-3.2951-6.5939zm-21.74381-2.1718c2.40661-1.49142 5.61781-2.31129 9.04591-2.31129s6.6393.81987 9.0459 2.31129c2.3087 1.4305 3.575 3.2795 3.575 5.2158s-1.2733 3.7941-3.575 5.2158c-2.4066 1.4915-5.6178 2.3113-9.0459 2.3113s-6.6393-.8198-9.04591-2.3113c-2.3087-1.4304-3.57499-3.2795-3.57499-5.2158s1.27328-3.7941 3.57499-5.2158zm19.67291 15.22c-2.8264 1.8403-6.6043 2.8521-10.627 2.8521s-7.80061-1.0118-10.62702-2.8521c-2.70748-1.7619-4.19764-4.0558-4.19764-6.4456 0-1.3083.44775-2.5904 1.30127-3.7679v.218c0 .2791.02099.5583.06296.8286-.1749.5408-.27284 1.1077-.27284 1.6834 0 4.7012 6.15653 8.5127 13.74727 8.5127 7.5907 0 13.7473-3.8115 13.7473-8.5127 0-.5757-.091-1.1426-.2729-1.6834.042-.2703.063-.5495.063-.8286 0-.0697 0-.1482 0-.218.8465 1.1775 1.3012 2.4596 1.3012 3.7679 0 2.3986-1.4901 4.6837-4.1976 6.4456zm-14.4958-9.9955c0-1.3257 1.735-2.3985 3.8688-2.3985s3.8688 1.0728 3.8688 2.3985c0 1.3258-1.735 2.3986-3.8688 2.3986s-3.8688-1.0728-3.8688-2.3986z" fill="#000"></path></svg>
+            </div>
+            <p><b>
+              {% if portal.current_language.code == "en" %}
+              Electric
+              {% elsif portal.current_language.code == "fr" %}
+              Électrique
+              {% elsif portal.current_language.code == "fil" %}
+              Elektriko
+              {% elsif portal.current_language.code == "de" %}
+              Elektrisch
+              {% elsif portal.current_language.code == "ar" %}
+              كهربائي
+              {% elsif portal.current_language.code == "bg" %}
+              Електрически
+              {% elsif portal.current_language.code == "zh-CN" %}
+              电动的
+              {% elsif portal.current_language.code == "zh-TW" %}
+              電動的
+              {% elsif portal.current_language.code == "hr" %}
+              Električni
+              {% elsif portal.current_language.code == "cs" %}
+              Elektrický
+              {% elsif portal.current_language.code == "da" %}
+              Elektrisk
+              {% elsif portal.current_language.code == "fi" %}
+              Sähköinen
+              {% elsif portal.current_language.code == "nl" %}
+              Elektrisch
+              {% elsif portal.current_language.code == "el" %}
+              Ηλεκτρικός
+              {% elsif portal.current_language.code == "he" %}
+              חשמלי
+              {% elsif portal.current_language.code == "hu" %}
+              Villamos
+              {% elsif portal.current_language.code == "id" %}
+              Listrik
+              {% elsif portal.current_language.code == "it" %}
+              Elettrico
+              {% elsif portal.current_language.code == "ja-JP" %}
+              電動
+              {% elsif portal.current_language.code == "ko" %}
+              전기의
+              {% elsif portal.current_language.code == "ms" %}
+              Elektrik
+              {% elsif portal.current_language.code == "nb-NO" %}
+              Elektrisk
+              {% elsif portal.current_language.code == "pl" %}
+              Elektryczny
+              {% elsif portal.current_language.code == "pt-BR" %}
+              Elétrico
+              {% elsif portal.current_language.code == "pt-PT" %}
+              Elétrico
+              {% elsif portal.current_language.code == "ro" %}
+              Electric
+              {% elsif portal.current_language.code == "sk" %}
+              Elektrický
+              {% elsif portal.current_language.code == "sl" %}
+              Električen
+              {% elsif portal.current_language.code == "es" %}
+              Eléctrico
+              {% elsif portal.current_language.code == "sv-SE" %}
+              Elektrisk
+              {% elsif portal.current_language.code == "th" %}
+              ไฟฟ้า
+              {% elsif portal.current_language.code == "tr" %}
+              Elektrik
+              {% elsif portal.current_language.code == "uk" %}
+              Електричний
+              {% elsif portal.current_language.code == "vi" %}
+              Điện
+              {% endif %}
+              </b></p>
+          </div>
+        </div>
+        <div class="col-12 col-md text-center">
+          <div class="feat-items">
+            <div class="ico mb-8">
+              <svg class="tw-inline tw-h-[3rem]" fill="none" height="50" viewBox="0 0 30 33" width="50" xmlns="http://www.w3.org/2000/svg"><g fill="#000"><path d="m18.3192 6.86368c1.1775 0 2.1337-.9753 2.1337-2.17623 0-1.20092-.9562-2.17622-2.1337-2.17622-1.1774 0-2.1337.9753-2.1337 2.17622 0 1.20093.9563 2.17623 2.1337 2.17623zm-.9134-2.17623c0-.51676.4068-.93162.9134-.93162.5067 0 .9134.42214.9134.93162 0 .50949-.4138.93163-.9134.93163-.4995 0-.9134-.42214-.9134-.93163z"></path><path d="m24.954 6.86368c1.1774 0 2.1337-.9753 2.1337-2.17623 0-1.20092-.9563-2.17622-2.1337-2.17622-1.1775 0-2.1337.9753-2.1337 2.17622 0 1.20093.9562 2.17623 2.1337 2.17623zm0-3.10785c.5067 0 .9134.42214.9134.93162 0 .50949-.4067.93163-.9134.93163s-.9134-.42214-.9134-.93163c0-.50948.4139-.93162.9134-.93162z"></path><path d="m27.0878 7.86768h-24.16983v1.17181h24.16983z"></path><path d="m0 0v33h30v-33zm1.07755 31.901v-30.80197h27.85205v30.80927h-27.85205z"></path><path d="m24.0336 10.4155h-18.06853c-1.68411 0-3.0471 1.3975-3.0471 3.1152v12.0019c0 1.7177 1.37012 3.1152 3.0471 3.1152h18.06853c1.6841 0 3.0471-1.3975 3.0471-3.1152v-12.0019c0-1.7177-1.3702-3.1152-3.0471-3.1152zm-19.9025 5.5097v-2.4018c0-1.0335.82065-1.8706 1.83397-1.8706h18.06853c1.0133 0 1.8339.8371 1.8339 1.8706v2.4018zm0 5.6626v-4.4908h21.7364v4.4908zm19.9025 5.8154h-18.06853c-1.01332 0-1.83397-.837-1.83397-1.8706v-2.773h21.7364v2.773c0 1.0336-.8206 1.8706-1.8339 1.8706z"></path><path d="m5.04451 6.86368c1.17746 0 2.13369-.9753 2.13369-2.17623 0-1.20092-.95623-2.17622-2.13369-2.17622-1.17745 0-2.12654.9753-2.12654 2.17622 0 1.20093.95623 2.17623 2.12654 2.17623zm-.91341-2.17623c0-.51676.41389-.93162.91341-.93162.49953 0 .91342.42214.91342.93162 0 .50949-.41389.93163-.91342.93163-.49952 0-.91341-.42214-.91341-.93163z"></path><path d="m11.6825 6.86368c1.1775 0 2.1266-.9753 2.1266-2.17623 0-1.20092-.9563-2.17622-2.1266-2.17622s-2.13367.9753-2.13367 2.17622c0 1.20093.95627 2.17623 2.13367 2.17623zm-.9134-2.17623c0-.51676.4139-.93162.9134-.93162s.9134.42214.9134.93162c0 .50949-.4067.93163-.9134.93163-.5066 0-.9134-.42214-.9134-.93163z"></path></g></svg>
+            </div>
+            <p><b>
+              {% if portal.current_language.code == "en" %}
+              Oven
+              {% elsif portal.current_language.code == "fr" %}
+              Four
+              {% elsif portal.current_language.code == "fil" %}
+              Hurno
+              {% elsif portal.current_language.code == "de" %}
+              Ofen
+              {% elsif portal.current_language.code == "ar" %}
+              فرن
+              {% elsif portal.current_language.code == "bg" %}
+              Фурна
+              {% elsif portal.current_language.code == "zh-CN" %}
+              烤箱
+              {% elsif portal.current_language.code == "zh-TW" %}
+              烤箱
+              {% elsif portal.current_language.code == "hr" %}
+              Pećnica
+              {% elsif portal.current_language.code == "cs" %}
+              Trouba
+              {% elsif portal.current_language.code == "da" %}
+              Ovn
+              {% elsif portal.current_language.code == "fi" %}
+              Uuni
+              {% elsif portal.current_language.code == "nl" %}
+              Oven
+              {% elsif portal.current_language.code == "el" %}
+              Φούρνος
+              {% elsif portal.current_language.code == "he" %}
+              תנור
+              {% elsif portal.current_language.code == "hu" %}
+              Sütő
+              {% elsif portal.current_language.code == "id" %}
+              Oven
+              {% elsif portal.current_language.code == "it" %}
+              Forno
+              {% elsif portal.current_language.code == "ja-JP" %}
+              オーブン
+              {% elsif portal.current_language.code == "ko" %}
+              오븐
+              {% elsif portal.current_language.code == "ms" %}
+              Oven
+              {% elsif portal.current_language.code == "nb-NO" %}
+              Ovn
+              {% elsif portal.current_language.code == "pl" %}
+              Piekarnik
+              {% elsif portal.current_language.code == "pt-BR" %}
+              Forno
+              {% elsif portal.current_language.code == "pt-PT" %}
+              Forno
+              {% elsif portal.current_language.code == "ro" %}
+              Cuptor
+              {% elsif portal.current_language.code == "sk" %}
+              Rúra
+              {% elsif portal.current_language.code == "sl" %}
+              Pečica
+              {% elsif portal.current_language.code == "es" %}
+              Horno
+              {% elsif portal.current_language.code == "sv-SE" %}
+              Ugn
+              {% elsif portal.current_language.code == "th" %}
+              เตาอบ
+              {% elsif portal.current_language.code == "tr" %}
+              Fırın
+              {% elsif portal.current_language.code == "uk" %}
+              Духовка
+              {% elsif portal.current_language.code == "vi" %}
+              Lò nướng
+              {% endif %}
+              </b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

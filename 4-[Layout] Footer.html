@@ -1,0 +1,576 @@
+{% comment %} Output the current language value {% endcomment %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var currentUrl = window.location.href;
+    var language = currentUrl.split('/')[3]; // Assuming the language is the fourth part of the URL
+    
+    // Check if the current language is "fil"
+    if (language === 'fil') {
+      language = 'tl-ph'; // Reroute to tl-ph
+    } else if (language === 'ja-JP') {
+      language = 'ja';
+    } else if (language === 'nb-NO') {
+      language = 'nb';
+    } else if (language === 'pt-PT') {
+      language = 'pt';
+    } else if (language === 'sv-SE') {
+      language = 'sv';
+    }
+    
+    var tagUrl = 'https://emura-pan.com/?l=' + language;
+    var tagTrackingUrl = 'https://emura-pan.com/tracking?l=' + language ;
+
+    var tag = document.getElementById('your-tag-home-id');
+    tag.href = tagUrl;
+    var tagTracking = document.getElementById('your-tag-tracking-id');
+    tagTracking.href = tagTrackingUrl;
+  });
+</script>
+{% comment %} Your HTML tag {% endcomment %}
+
+{% if  portal.current_page != "csat_survey" %}
+ <footer class="container-fluid px-0 footer-background">
+   
+   <section class="footer-body">
+     <div class="container">
+        <div class="row">
+         <div class="footer-left col-footer">
+          <svg class="tw-max-w-[12rem] tw-mb-7 tw-mx-auto md:tw-mx-0 mb-16" alt="Emura Logo" width="200" height="83" viewBox="0 0 465 83" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><path d="M31.1773 12.841C26.449 12.841 24.0848 15.2026 24.0848 19.9258V36.1125H50.5831V45.7557H24.0848V63.7136C24.0848 66.3704 24.8729 68.486 26.3997 69.9619C27.9266 71.4379 30.2415 72.2251 33.246 72.2251H59.3009V81.8683H16.0566C11.673 81.8683 7.88052 80.4907 4.72831 77.7847C1.5761 75.0787 0 70.9459 0 65.4848V18.3022C0 13.9234 1.42834 10.2826 4.23578 7.47825C7.09247 4.62466 11.082 3.24707 16.2043 3.24707H57.3308V12.8902H31.1773V12.841Z"></path><path d="M156.921 4.33001C160.418 2.50962 164.506 1.62402 169.235 1.62402C174.061 1.62402 178.199 2.95242 181.696 5.56C185.193 8.16759 186.917 12.3496 186.917 18.0075V81.8688H162.832V26.3223C162.832 24.8463 162.684 23.2227 162.438 21.5991C162.191 19.9263 161.256 19.0899 159.63 19.0899C158.153 19.0899 157.02 19.5819 156.281 20.5167C155.542 21.5007 154.902 22.5831 154.36 23.8623L130.571 77.6377C130.029 78.8185 129.487 79.9501 128.945 81.0324C128.404 82.1148 127.369 82.656 125.892 82.656C124.611 82.656 123.675 82.1148 123.084 80.9832C122.493 79.8517 121.952 78.7201 121.41 77.5393L98.7532 26.3223C98.1129 24.8463 97.3741 23.4195 96.5861 22.0911C95.798 20.7627 94.6159 20.0739 93.1384 20.0739C91.7593 20.0739 90.8234 20.6151 90.3309 21.7467C89.8384 22.8783 89.5921 24.0591 89.5921 25.3383V81.8196H79.9385V19.5819C79.9385 16.6792 80.4803 14.17 81.5638 11.956C82.6474 9.74198 84.0757 7.87239 85.7996 6.3472C87.5727 4.82201 89.5921 3.64121 91.907 2.90322C94.2219 2.16522 96.6353 1.77162 99.1965 1.77162C101.955 1.77162 104.368 1.96842 106.437 2.41122C108.456 2.85402 110.278 3.54281 111.904 4.57601C113.529 5.6092 114.958 6.9376 116.238 8.65959C117.519 10.3816 118.75 12.4972 119.932 15.1048L133.822 46.2482L148.45 13.9732C150.617 9.34839 153.424 6.1504 156.921 4.33001Z"></path><path d="M237.056 68.9291C240.553 71.8811 245.232 73.3571 251.093 73.3571C256.56 73.3571 260.993 71.8811 264.342 68.9291C267.692 65.9771 269.415 61.0572 269.415 54.0708V3.19824H279.069V53.2836C279.069 63.7632 276.163 71.3399 270.302 76.0139C264.441 80.6879 256.413 83.0003 246.119 83.0003C240.553 83.0003 235.381 82.4591 230.702 81.3275C225.974 80.1959 221.935 78.4739 218.586 76.1123C215.188 73.7507 212.577 70.7495 210.607 67.1087C208.686 63.468 207.701 59.0892 207.701 53.9232V3.19824H231.786V53.9232C231.835 61.008 233.608 65.9771 237.056 68.9291Z"></path><path d="M301.282 81.8687V3.19824H340.636C345.561 3.19824 349.797 3.93624 353.343 5.36303C356.889 6.78982 359.746 8.70862 362.011 11.0702C364.277 13.4318 365.903 16.0394 366.888 18.9422C367.922 21.845 368.414 24.6985 368.414 27.6013C368.414 32.0785 367.429 36.0637 365.459 39.5569C363.489 43.0501 360.041 45.018 355.116 45.5592L375.852 81.8195H351.274L329.751 42.0169H334.43C336.252 42.0169 337.877 41.6233 339.256 40.8361C340.636 40.0489 341.818 38.9173 342.704 37.5397C343.64 36.1621 344.28 34.5877 344.724 32.8657C345.167 31.1437 345.364 29.3725 345.364 27.5521C345.364 25.7317 345.118 23.9605 344.625 22.1894C344.133 20.4182 343.394 18.8438 342.359 17.4662C341.325 16.0886 340.094 14.957 338.567 14.0714C337.089 13.235 335.316 12.7922 333.248 12.7922H325.367V81.8195H301.282V81.8687Z"></path><path d="M419.54 2.16479C421.263 0.737996 423.775 0 427.075 0C432.986 0 436.877 2.85359 438.798 8.51156L465 81.8684H441.211L434.611 63.2709H406.192L399.937 81.8684H390.283L415.501 8.51156C416.486 5.70717 417.816 3.59158 419.54 2.16479ZM422.101 28.8803C421.756 28.3391 421.214 28.0931 420.328 28.0931C419.49 28.0931 418.85 28.3391 418.505 28.8803C418.111 29.4215 417.717 30.2087 417.323 31.291L409.541 53.6277H431.065L423.184 31.3403C422.79 30.2087 422.396 29.4215 422.101 28.8803Z"></path></g></svg>
+           <p>
+            {% if portal.current_language.code == "en" %}
+            With Emura, you can have it all. A pan that meets every need, outlasts the competition, and outperforms your wildest dreams.
+            {% elsif portal.current_language.code == "fr" %}
+            Avec Emura, vous pouvez tout avoir. Une poêle qui répond à tous les besoins, qui dure plus longtemps que la concurrence et qui surpasse vos rêves les plus fous.
+            {% elsif portal.current_language.code == "fil" %}
+            Sa Emura, maaari mong magkaroon ng lahat. Isang kawali na sumasagot sa bawat pangangailangan, tumatagal nang higit sa kumpetisyon, at nagpapataas sa pinakamalalang pangarap mo.
+            {% elsif portal.current_language.code == "de" %}
+            Mit Emura können Sie alles haben. Eine Pfanne, die jeden Bedarf erfüllt, die Konkurrenz überdauert und Ihre kühnsten Träume übertrifft.
+            {% elsif portal.current_language.code == "ar" %}
+            مع إمورا ، يمكنك الحصول على كل شيء. مقلاة تلبي كل احتياجاتك ، تدوم أكثر من المنافسة ، وتتفوق على أحلامك الأكثر جرأة.
+            {% elsif portal.current_language.code == "bg" %}
+            С Emura можете да имате всичко. Тиган, който задоволява всички нужди, преживява конкуренцията и превъзхожда най-дивите ви мечти.
+            {% elsif portal.current_language.code == "zh-CN" %}
+            拥有 Emura，你可以拥有一切。一口锅，满足所有需要，经受住竞争，超越你最狂野的梦想。
+            {% elsif portal.current_language.code == "zh-TW" %}
+            擁有 Emura，你可以擁有一切。一口鍋，滿足所有需要，經得起競爭，超越你最狂野的夢想。
+            {% elsif portal.current_language.code == "hr" %}
+            S Emura, možete imati sve. Tava koja zadovoljava svaku potrebu, preživljava konkurenciju i nadmašuje vaše najluđe snove.
+            {% elsif portal.current_language.code == "cs" %}
+            S Emura můžete mít všechno. Pan, který splňuje každou potřebu, přežije konkurenci a předčí vaše nejdivočejší sny.
+            {% elsif portal.current_language.code == "da" %}
+            Med Emura kan du have det hele. En pande, der opfylder enhver behov, overlever konkurrencen og overgår dine vildeste drømme.
+            {% elsif portal.current_language.code == "fi" %}
+            Emuralla voit saada kaiken. Pannu, joka täyttää jokaisen tarpeesi, kestää kilpailun ja ylittää villeimmätkin unelmasi.
+            {% elsif portal.current_language.code == "nl" %}
+            Met Emura heb je alles. Een pan die aan elke behoefte voldoet, de concurrentie overleeft en je wildste dromen overtreft.
+            {% elsif portal.current_language.code == "el" %}
+            Με το Emura, μπορείτε να έχετε τα πάντα. Ένα τηγάνι που ικανοποιεί κάθε ανάγκη, αντέχει στον ανταγωνισμό και ξεπερνά τα πιο τρελά σας όνειρα.
+            {% elsif portal.current_language.code == "he" %}
+            עם Emura, תוכל לקבל את הכל. מחבת שעומדת בכל צורך, עומדת במתחרה ומעלה על פני החלומות הכי פרועים שלך.
+            {% elsif portal.current_language.code == "hu" %}
+            Az Emura-val mindent megkaphatsz. Egy serpenyő, ami minden igényt kielégít, túlél minden versenyt, és túlszárnyalja a legvadabb álmaidat.
+            {% elsif portal.current_language.code == "id" %}
+            Dengan Emura, Anda bisa mendapatkan segalanya. Wajan yang memenuhi setiap kebutuhan, bertahan lebih lama dari pesaing, dan melebihi impian terliar Anda.
+            {% elsif portal.current_language.code == "it" %}
+            Con Emura, puoi avere tutto. Una padella che soddisfa ogni esigenza, dura più a lungo della concorrenza e supera i tuoi sogni più sfrenati.
+            {% elsif portal.current_language.code == "ja-JP" %}
+            Emuraで全てを手に入れることができます。すべてのニーズに応え、競争に耐え、あなたの最も大胆な夢を超えます。
+            {% elsif portal.current_language.code == "ko" %}
+            Emura와 함께 모든 것을 가질 수 있습니다. 모든 필요를 충족시키는 프라이팬으로 경쟁을 능가하세요.
+            {% elsif portal.current_language.code == "ms" %}
+            Dengan Emura, anda boleh memiliki segalanya. Sebuah kuali yang memenuhi setiap keperluan, lebih tahan lama daripada pesaing, dan melampaui impian paling liar anda.
+            {% elsif portal.current_language.code == "nb-NO" %}
+            Med Emura kan du ha alt. En panne som dekker alle behov, overlever konkurransen, og overgår dine villeste drømmer.
+            {% elsif portal.current_language.code == "pl" %}
+            Dzięki Emura możesz mieć wszystko. Patelnia, która spełnia wszystkie potrzeby, przetrwa konkurencję i przewyższy Twoje najbardziej szalone marzenia.
+            {% elsif portal.current_language.code == "pt-BR" %}
+            Com Emura, você pode ter tudo. Uma frigideira que atende a todas as necessidades, dura mais que a concorrência e supera seus sonhos mais ousados.
+            {% elsif portal.current_language.code == "pt-PT" %}
+            Com a Emura, podes ter tudo. Uma frigideira que satisfaz todas as necessidades, ultrapassa a concorrência e supera os teus sonhos mais audazes.
+            {% elsif portal.current_language.code == "ro" %}
+            Cu Emura, poți avea totul. O tigaie care satisface fiecare nevoie, supraviețuiește competiției și depășește cele mai sălbatice vise ale tale.
+            {% elsif portal.current_language.code == "sk" %}
+            S Emura môžete mať všetko. Panvica, ktorá spĺňa každú potrebu, prežije konkurenciu a prevyšuje vaše najdivokejšie sny.
+            {% elsif portal.current_language.code == "sl" %}
+            Z Emura lahko imate vse. Ponev, ki zadovolji vsako potrebo, preživi konkurenco in presega vaše najbolj divje sanje.
+            {% elsif portal.current_language.code == "es" %}
+            Con Emura, puedes tenerlo todo. Una sartén que satisface todas las necesidades, supera a la competencia y supera tus sueños más salvajes.
+            {% elsif portal.current_language.code == "sv-SE" %}
+            Med Emura kan du ha allt. En stekpanna som uppfyller varje behov, överlever konkurrensen och överträffar dina vildaste drömmar.
+            {% elsif portal.current_language.code == "th" %}
+            กับ Emura คุณสามารถมีทุกอย่าง กระทะที่ตอบโจทย์ทุกความต้องการ ทนทานและดีกว่าคู่แข่งทุกด้านของคุณ
+            {% elsif portal.current_language.code == "tr" %}
+            Emura ile her şeye sahip olabilirsiniz. Her ihtiyacı karşılayan, rekabeti aşan ve en vahşi hayallerinizi gerçekleştiren bir tava.
+            {% elsif portal.current_language.code == "uk" %}
+            З Emura ви можете мати все. Сковорода, яка задовольняє всі потреби, переживає конкуренцію і перевершує ваші найдикіші мрії.
+            {% elsif portal.current_language.code == "vi" %}
+            Với Emura, bạn có thể có tất cả. Một chiếc chảo đáp ứng mọi nhu cầu, vượt trội hơn so với đối thủ và hơn cả những giấc mơ hoang dại nhất của bạn.
+            {% endif %}
+           </p>
+         </div>
+         
+         <div class="footer-center col-footer">
+           <h3>
+            {% if portal.current_language.code == "en" %}
+            Contacts
+            {% elsif portal.current_language.code == "fr" %}
+            Contacts
+            {% elsif portal.current_language.code == "fil" %}
+            Mga contact
+            {% elsif portal.current_language.code == "de" %}
+            Kontakte
+            {% elsif portal.current_language.code == "ar" %}
+            جهات الاتصال
+            {% elsif portal.current_language.code == "bg" %}
+            Контакти
+            {% elsif portal.current_language.code == "zh-CN" %}
+            联系人
+            {% elsif portal.current_language.code == "zh-TW" %}
+            聯繫人
+            {% elsif portal.current_language.code == "hr" %}
+            Kontakti
+            {% elsif portal.current_language.code == "cs" %}
+            Kontakty
+            {% elsif portal.current_language.code == "da" %}
+            Kontaktpersoner
+            {% elsif portal.current_language.code == "fi" %}
+            Yhteystiedot
+            {% elsif portal.current_language.code == "nl" %}
+            Contacten
+            {% elsif portal.current_language.code == "el" %}
+            Επαφές
+            {% elsif portal.current_language.code == "he" %}
+            אנשי קשר
+            {% elsif portal.current_language.code == "hu" %}
+            Kapcsolatok
+            {% elsif portal.current_language.code == "id" %}
+            Kontak
+            {% elsif portal.current_language.code == "it" %}
+            Contatti
+            {% elsif portal.current_language.code == "ja-JP" %}
+            連絡先
+            {% elsif portal.current_language.code == "ko" %}
+            콘택트 렌즈
+            {% elsif portal.current_language.code == "ms" %}
+            Kenalan
+            {% elsif portal.current_language.code == "nb-NO" %}
+            Kontakter
+            {% elsif portal.current_language.code == "pl" %}
+            Łączność
+            {% elsif portal.current_language.code == "pt-BR" %}
+            Contatos
+            {% elsif portal.current_language.code == "pt-PT" %}
+            Contatos
+            {% elsif portal.current_language.code == "ro" %}
+            Contacte
+            {% elsif portal.current_language.code == "sk" %}
+            Kontakty
+            {% elsif portal.current_language.code == "sl" %}
+            Kontakti
+            {% elsif portal.current_language.code == "es" %}
+            Contactos
+            {% elsif portal.current_language.code == "sv-SE" %}
+            Kontakter
+            {% elsif portal.current_language.code == "th" %}
+            ติดต่อ
+            {% elsif portal.current_language.code == "tr" %}
+            Kişiler
+            {% elsif portal.current_language.code == "uk" %}
+            Контакти
+            {% elsif portal.current_language.code == "vi" %}
+            Liên lạc
+            {% endif %}
+           </h3>
+           <p class="email-id"><a href="mailto:support@emura-pan.com">support@emura-pan.com</a></p>
+           <h4><a class="ignore" href="tel:+1 (618) 416-9231">(US) +1 (618) 416-9231</a></h4>
+           <h4><a class="ignore" href="tel:+442080891401">(UK) +442080891401</a></h4>
+           <h4><a class="ignore" href="tel:+498004009820">(DE) +498004009820</a></h4>
+           <h4><a class="ignore" href="tel:+33644656863">(FR) +33644656863</a></h4>
+           <h4><a class="ignore" href="tel:+48800005495">(PL) +48800005495</a></h4>
+           <h4><a class="ignore" href="tel:+46103371611">(SV) +46103371611</a></h4>
+       </div>
+         
+         <div class="footer-right col-footer">
+           <h3>
+            {% if portal.current_language.code == "en" %}
+            Useful Links
+            {% elsif portal.current_language.code == "fr" %}
+            Liens utiles
+            {% elsif portal.current_language.code == "fil" %}
+            Mga Kapaki-pakinabang na Link
+            {% elsif portal.current_language.code == "de" %}
+            Nützliche Links
+            {% elsif portal.current_language.code == "ar" %}
+            روابط مفيدة
+            {% elsif portal.current_language.code == "bg" %}
+            Полезни връзки
+            {% elsif portal.current_language.code == "zh-CN" %}
+            有用的链接
+            {% elsif portal.current_language.code == "zh-TW" %}
+            有用的鏈接
+            {% elsif portal.current_language.code == "hr" %}
+            korisni linkovi
+            {% elsif portal.current_language.code == "cs" %}
+            užitečné odkazy
+            {% elsif portal.current_language.code == "da" %}
+            nyttige links
+            {% elsif portal.current_language.code == "fi" %}
+            hyödyllisiä linkkejä
+            {% elsif portal.current_language.code == "nl" %}
+            handige links
+            {% elsif portal.current_language.code == "el" %}
+            Χρήσιμοι Σύνδεσμοι
+            {% elsif portal.current_language.code == "he" %}
+            קישורים שימושיים
+            {% elsif portal.current_language.code == "hu" %}
+            Hasznos Linkek
+            {% elsif portal.current_language.code == "id" %}
+            Tautan yang Berguna
+            {% elsif portal.current_language.code == "it" %}
+            link utili
+            {% elsif portal.current_language.code == "ja-JP" %}
+            役立つリンク
+            {% elsif portal.current_language.code == "ko" %}
+            유용한 링크
+            {% elsif portal.current_language.code == "ms" %}
+            Pautan Berguna
+            {% elsif portal.current_language.code == "nb-NO" %}
+            nyttige lenker
+            {% elsif portal.current_language.code == "pl" %}
+            Przydatne linki
+            {% elsif portal.current_language.code == "pt-BR" %}
+            Links Úteis
+            {% elsif portal.current_language.code == "pt-PT" %}
+            Links Úteis
+            {% elsif portal.current_language.code == "ro" %}
+            Link-uri utile
+            {% elsif portal.current_language.code == "sk" %}
+            užitočné odkazy
+            {% elsif portal.current_language.code == "sl" %}
+            Uporabne povezave
+            {% elsif portal.current_language.code == "es" %}
+            Enlaces útiles
+            {% elsif portal.current_language.code == "sv-SE" %}
+            Användbara länkar
+            {% elsif portal.current_language.code == "th" %}
+            ลิงค์ที่มีประโยชน์
+            {% elsif portal.current_language.code == "tr" %}
+            kullanışlı bağlantılar
+            {% elsif portal.current_language.code == "uk" %}
+            корисні посилання
+            {% elsif portal.current_language.code == "vi" %}
+            Liên kết hữu ích
+            {% endif %}
+             <div class="underline"><span></span></div>
+           </h3>
+           <p class="pt-4 mb-4">
+             <a id="your-tag-home-id">
+              <!-- English -->
+              {% if portal.current_language.code == "en" %}
+              Home
+              {% elsif portal.current_language.code == "fr" %}
+              Accueil
+              {% elsif portal.current_language.code == "fil" %}
+              Tahanang Pahina
+              {% elsif portal.current_language.code == "de" %}
+              Start
+              {% elsif portal.current_language.code == "ar" %}
+              بيت
+              {% elsif portal.current_language.code == "bg" %}
+              У дома
+              {% elsif portal.current_language.code == "zh-CN" %}
+              家
+              {% elsif portal.current_language.code == "zh-TW" %}
+              家
+              {% elsif portal.current_language.code == "hr" %}
+              Dom
+              {% elsif portal.current_language.code == "cs" %}
+              Domov
+              {% elsif portal.current_language.code == "da" %}
+              Hjem
+              {% elsif portal.current_language.code == "fi" %}
+              Koti
+              {% elsif portal.current_language.code == "nl" %}
+              Thuis
+              {% elsif portal.current_language.code == "el" %}
+              Σπίτι
+              {% elsif portal.current_language.code == "he" %}
+              בית
+              {% elsif portal.current_language.code == "hu" %}
+              itthon
+              {% elsif portal.current_language.code == "id" %}
+              Rumah
+              {% elsif portal.current_language.code == "it" %}
+              Casa
+              {% elsif portal.current_language.code == "ja-JP" %}
+              家
+              {% elsif portal.current_language.code == "ko" %}
+              집
+              {% elsif portal.current_language.code == "ms" %}
+              Rumah
+              {% elsif portal.current_language.code == "nb-NO" %}
+              Hjem
+              {% elsif portal.current_language.code == "pl" %}
+              Dom
+              {% elsif portal.current_language.code == "pt-BR" %}
+              Lar
+              {% elsif portal.current_language.code == "pt-PT" %}
+              Lar
+              {% elsif portal.current_language.code == "ro" %}
+              Acasă
+              {% elsif portal.current_language.code == "sk" %}
+              Domov
+              {% elsif portal.current_language.code == "sl" %}
+              domov
+              {% elsif portal.current_language.code == "es" %}
+              Hogar
+              {% elsif portal.current_language.code == "sv-SE" %}
+              Hem
+              {% elsif portal.current_language.code == "th" %}
+              บ้าน
+              {% elsif portal.current_language.code == "tr" %}
+              Ev
+              {% elsif portal.current_language.code == "uk" %}
+              додому
+              {% elsif portal.current_language.code == "vi" %}
+              Trang chủ
+              {% endif %}
+             </a>
+           </p>
+           <p class="pt-4 mb-4">
+             <a id="your-tag-tracking-id">
+              {% if portal.current_language.code == "en" %}
+              Track My Order
+              {% elsif portal.current_language.code == "fr" %}
+              Suivre ma commande
+              {% elsif portal.current_language.code == "fil" %}
+              Subaybayan ang Aking Order
+              {% elsif portal.current_language.code == "de" %}
+              Meine Bestellung verfolgen
+              {% elsif portal.current_language.code == "ar" %}
+              تابع طلبي
+              {% elsif portal.current_language.code == "bg" %}
+              Проследете моята поръчка
+              {% elsif portal.current_language.code == "zh-CN" %}
+              追踪我的订单
+              {% elsif portal.current_language.code == "zh-TW" %}
+              追踪我的訂單
+              {% elsif portal.current_language.code == "hr" %}
+              Prati moju narudžbu
+              {% elsif portal.current_language.code == "cs" %}
+              Sledovat mou objednávku
+              {% elsif portal.current_language.code == "da" %}
+              Følg min ordre
+              {% elsif portal.current_language.code == "fi" %}
+              Seuraa tilaustani
+              {% elsif portal.current_language.code == "nl" %}
+              Traceer mijn bestelling
+              {% elsif portal.current_language.code == "el" %}
+              Παρακολούθηση της παραγγελίας μου
+              {% elsif portal.current_language.code == "he" %}
+              עקוב אחר ההזמנה שלי
+              {% elsif portal.current_language.code == "hu" %}
+              Kövesse nyomon a rendelésemet
+              {% elsif portal.current_language.code == "id" %}
+              Lacak pesanan saya
+              {% elsif portal.current_language.code == "it" %}
+              Traccia il mio ordine
+              {% elsif portal.current_language.code == "ja-JP" %}
+              注文を追跡する
+              {% elsif portal.current_language.code == "ko" %}
+              내 주문을 추적
+              {% elsif portal.current_language.code == "ms" %}
+              Kesan tempahan saya
+              {% elsif portal.current_language.code == "nb-NO" %}
+              Spor min bestilling
+              {% elsif portal.current_language.code == "pl" %}
+              Śledź moje zamówienie
+              {% elsif portal.current_language.code == "pt-BR" %}
+              Acompanhar o meu pedido
+              {% elsif portal.current_language.code == "pt-PT" %}
+              Acompanhar o meu pedido
+              {% elsif portal.current_language.code == "ro" %}
+              Urmărește-mi comanda
+              {% elsif portal.current_language.code == "sk" %}
+              Sledovať moju objednávku
+              {% elsif portal.current_language.code == "sl" %}
+              Sledi mojemu naročilu
+              {% elsif portal.current_language.code == "es" %}
+              Seguimiento de mi pedido
+              {% elsif portal.current_language.code == "sv-SE" %}
+              Spåra min beställning
+              {% elsif portal.current_language.code == "th" %}
+              ติดตามคำสั่งซื้อของฉัน
+              {% elsif portal.current_language.code == "tr" %}
+              Benim siparişimi takip et
+              {% elsif portal.current_language.code == "uk" %}
+              Відстежити моє замовлення
+              {% elsif portal.current_language.code == "vi" %}
+              Theo dõi đơn hàng của tôi
+              {% endif %}
+             </a>
+           </p>
+           <p class="pt-4 mb-4">
+             <a href="https://ekomlita.everflowclient.io/affiliate/signup?q=5J473L">
+              {% if portal.current_language.code == "en" %}
+              Affiliate
+              {% elsif portal.current_language.code == "fr" %}
+              Affilier
+              {% elsif portal.current_language.code == "fil" %}
+              Kaakibat
+              {% elsif portal.current_language.code == "de" %}
+              Affiliate
+              {% elsif portal.current_language.code == "ar" %}
+              شركة تابعة
+              {% elsif portal.current_language.code == "bg" %}
+              Партньор
+              {% elsif portal.current_language.code == "zh-CN" %}
+              会员
+              {% elsif portal.current_language.code == "zh-TW" %}
+              會員
+              {% elsif portal.current_language.code == "hr" %}
+              Affiliate
+              {% elsif portal.current_language.code == "cs" %}
+              Přidružený
+              {% elsif portal.current_language.code == "da" %}
+              Affiliate
+              {% elsif portal.current_language.code == "fi" %}
+              Yhteistyökumppani
+              {% elsif portal.current_language.code == "nl" %}
+              aangesloten
+              {% elsif portal.current_language.code == "el" %}
+              Εισδέχομαι μέλη
+              {% elsif portal.current_language.code == "he" %}
+              שותף
+              {% elsif portal.current_language.code == "hu" %}
+              Leányvállalat
+              {% elsif portal.current_language.code == "id" %}
+              Afiliasi
+              {% elsif portal.current_language.code == "it" %}
+              Affiliato
+              {% elsif portal.current_language.code == "ja-JP" %}
+              アフィリエイト
+              {% elsif portal.current_language.code == "ko" %}
+              제휴하다
+              {% elsif portal.current_language.code == "ms" %}
+              ahli gabungan
+              {% elsif portal.current_language.code == "nb-NO" %}
+              Bli partner
+              {% elsif portal.current_language.code == "pl" %}
+              Przyłączać
+              {% elsif portal.current_language.code == "pt-BR" %}
+              Afiliada
+              {% elsif portal.current_language.code == "pt-PT" %}
+              Afiliada
+              {% elsif portal.current_language.code == "ro" %}
+              Afiliat
+              {% elsif portal.current_language.code == "sk" %}
+              Pridružený
+              {% elsif portal.current_language.code == "sl" %}
+              Podružnica
+              {% elsif portal.current_language.code == "es" %}
+              Afiliada
+              {% elsif portal.current_language.code == "sv-SE" %}
+              Dotterbolag
+              {% elsif portal.current_language.code == "th" %}
+              พันธมิตร
+              {% elsif portal.current_language.code == "tr" %}
+              ortak
+              {% elsif portal.current_language.code == "uk" %}
+              Філіал
+              {% elsif portal.current_language.code == "vi" %}
+              liên kết
+              {% endif %}
+             </a>
+           </p>
+       </div>
+       </div>
+     </div>
+   </section>
+   
+   <section class="">
+       <div class="footer__copy">
+      <div class="container">
+          <div class="footer__copy-holder footer__copy-holder--">
+            <p class="footer__copy-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">® <script>document.write(new Date().getFullYear())</script> {{ portal.name }} 
+              {% if portal.current_language.code == "en" %}
+              All rights reserved.
+              {% elsif portal.current_language.code == "fr" %}
+              Tous les droits sont réservés.
+              {% elsif portal.current_language.code == "fil" %}
+              Lahat ng karapatan ay nakalaan.
+              {% elsif portal.current_language.code == "de" %}
+              Alle Rechte vorbehalten.
+              {% elsif portal.current_language.code == "ar" %}
+              كل الحقوق محفوظة.
+              {% elsif portal.current_language.code == "bg" %}
+              Всички права запазени.
+              {% elsif portal.current_language.code == "zh-CN" %}
+              版权所有。
+              {% elsif portal.current_language.code == "zh-TW" %}
+              版權所有。
+              {% elsif portal.current_language.code == "hr" %}
+              Sva prava pridržana.
+              {% elsif portal.current_language.code == "cs" %}
+              Všechna práva vyhrazena.
+              {% elsif portal.current_language.code == "da" %}
+              Alle rettigheder forbeholdes.
+              {% elsif portal.current_language.code == "fi" %}
+              Kaikki oikeudet pidätetään.
+              {% elsif portal.current_language.code == "nl" %}
+              Alle rechten voorbehouden.
+              {% elsif portal.current_language.code == "el" %}
+              Ολα τα δικαιώματα διατηρούνται.
+              {% elsif portal.current_language.code == "he" %}
+              כל הזכויות שמורות.
+              {% elsif portal.current_language.code == "hu" %}
+              Minden jog fenntartva.
+              {% elsif portal.current_language.code == "id" %}
+              Seluruh hak cipta.
+              {% elsif portal.current_language.code == "it" %}
+              Tutti i diritti riservati.
+              {% elsif portal.current_language.code == "ja-JP" %}
+              全著作権所有。
+              {% elsif portal.current_language.code == "ko" %}
+              판권 소유.
+              {% elsif portal.current_language.code == "ms" %}
+              Hak cipta terpelihara.
+              {% elsif portal.current_language.code == "nb-NO" %}
+              Alle rettigheter forbeholdt.
+              {% elsif portal.current_language.code == "pl" %}
+              Wszelkie prawa zastrzeżone.
+              {% elsif portal.current_language.code == "pt-BR" %}
+              Todos os direitos reservados.
+              {% elsif portal.current_language.code == "pt-PT" %}
+              Todos os direitos reservados.
+              {% elsif portal.current_language.code == "ro" %}
+              Toate drepturile rezervate.
+              {% elsif portal.current_language.code == "sk" %}
+              Všetky práva vyhradené.
+              {% elsif portal.current_language.code == "sl" %}
+              Vse pravice pridržane.
+              {% elsif portal.current_language.code == "es" %}
+              Reservados todos los derechos.
+              {% elsif portal.current_language.code == "sv-SE" %}
+              Alla rättigheter förbehållna.
+              {% elsif portal.current_language.code == "th" %}
+              สงวนลิขสิทธิ์.
+              {% elsif portal.current_language.code == "tr" %}
+              Her hakkı saklıdır.
+              {% elsif portal.current_language.code == "uk" %}
+              Всі права захищені.
+              {% elsif portal.current_language.code == "vi" %}
+              Đã đăng ký Bản quyền.
+              {% endif %}
+              </font></font></p>
+            <img class="footer__payments-img" src="https://derila.com/theme/images/ico-cards.svg?2" data-src="https://derila.com/theme/images/ico-cards.svg?2" alt="Payment methods">
+          </div>
+        </div>
+      </div>
+   </section>
+   
+  <!-- Octocom Chat Widget -->
+  <script src="https://www.octocom.ai/chatbot/bundle.js" async></script>
+   
+ </footer>
+{% endif %}

@@ -1,0 +1,309 @@
+{% comment %} Output the current language value {% endcomment %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var currentUrl = window.location.href;
+    var language = currentUrl.split('/')[3]; // Assuming the language is the fourth part of the URL
+
+    // Check if the current language is "fil"
+    if (language === 'fil') {
+      language = 'tl-ph'; // Reroute to tl-ph
+    } else if (language === 'ja-JP') {
+      language = 'ja';
+    } else if (language === 'nb-NO') {
+      language = 'nb';
+    } else if (language === 'pt-PT') {
+      language = 'pt';
+    } else if (language === 'sv-SE') {
+      language = 'sv';
+    }
+
+    var tagUrl = 'https://emura-pan.com/?l=' + language;
+    var lastLink = document.referrer;
+    var cFtagUrl = 'https://emura-pan.com/contact-2';
+    var contactForm2Btn = document.getElementById('contact-form-2-btn');
+    contactForm2Btn.href = cFtagUrl;
+    var homeUrl = lastLink.includes('emura') && !lastLink.includes('support') ? lastLink : tagUrl;
+    var tag = document.getElementById('your-tag-id');
+    var homeBtn = document.getElementById('home-btn');
+    tag.href = homeUrl;
+    homeBtn.href = homeUrl;
+
+    // Default values
+    var importantNotice = "";
+    var importantMessage = "";
+    // Null the value inside if no longer in used//
+
+    // Set content based on language
+    if (language === 'en') {
+      importantNotice = "SHIPPING NOTICE:";
+      importantMessage = "Due to recent changes in international trade regulations, certain orders may experience delays while goods are processed through customs. Please be assured that we are making every effort to minimise any disruption. We appreciate your understanding and patience. Maintaining fair pricing for our customers remains our foremost priority.";
+    } else {
+      importantNotice = "";
+      importantMessage = "";
+    }
+    // Add more conditions for other languages as needed
+
+    // Populate the content in HTML
+    //document.querySelector('.news-banner .news-content .news-subject').innerText = importantNotice;
+    //document.querySelector('.news-banner .news-content .news-title').innerText = importantMessage;
+  });
+</script>
+{% comment %} Your HTML tag {% endcomment %}
+
+<header class="container-fluid px-0 fw-nav-wrapper fixed-top" onload="storeValues()">
+  <section class="container">
+    <nav class="navbar">
+
+      <a id="your-tag-id" class="mb-16 mt-16" style="max-width: 120px" aria-label="go to Emura homepage" >       
+        <img src="{{ portal.logo_url }}" alt="Emura Logo"/>      
+      </a>
+
+
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li>
+            <a id="home-btn">
+              {% if portal.current_language.code == "en" %}
+              Home
+              {% elsif portal.current_language.code == "fr" %}
+              Accueil
+              {% elsif portal.current_language.code == "fil" %}
+              Bahay
+              {% elsif portal.current_language.code == "de" %}
+              Start
+              {% elsif portal.current_language.code == "ar" %}
+              بيت
+              {% elsif portal.current_language.code == "bg" %}
+              У дома
+              {% elsif portal.current_language.code == "zh-CN" %}
+              家
+              {% elsif portal.current_language.code == "zh-TW" %}
+              家
+              {% elsif portal.current_language.code == "hr" %}
+              Dom
+              {% elsif portal.current_language.code == "cs" %}
+              Domov
+              {% elsif portal.current_language.code == "da" %}
+              Hjem
+              {% elsif portal.current_language.code == "fi" %}
+              Koti
+              {% elsif portal.current_language.code == "nl" %}
+              Thuis
+              {% elsif portal.current_language.code == "el" %}
+              Σπίτι
+              {% elsif portal.current_language.code == "he" %}
+              בית
+              {% elsif portal.current_language.code == "hu" %}
+              itthon
+              {% elsif portal.current_language.code == "id" %}
+              Rumah
+              {% elsif portal.current_language.code == "it" %}
+              Casa
+              {% elsif portal.current_language.code == "ja-JP" %}
+              家
+              {% elsif portal.current_language.code == "ko" %}
+              집
+              {% elsif portal.current_language.code == "ms" %}
+              Rumah
+              {% elsif portal.current_language.code == "nb-NO" %}
+              Hjem
+              {% elsif portal.current_language.code == "pl" %}
+              Dom
+              {% elsif portal.current_language.code == "pt-BR" %}
+              Lar
+              {% elsif portal.current_language.code == "pt-PT" %}
+              Lar
+              {% elsif portal.current_language.code == "ro" %}
+              Acasă
+              {% elsif portal.current_language.code == "sk" %}
+              Domov
+              {% elsif portal.current_language.code == "sl" %}
+              domov
+              {% elsif portal.current_language.code == "es" %}
+              Hogar
+              {% elsif portal.current_language.code == "sv-SE" %}
+              Hem
+              {% elsif portal.current_language.code == "th" %}
+              บ้าน
+              {% elsif portal.current_language.code == "tr" %}
+              Ev
+              {% elsif portal.current_language.code == "uk" %}
+              додому
+              {% elsif portal.current_language.code == "vi" %}
+              Trang chủ
+              {% endif %}
+            </a>
+          </li>
+          <li>
+            <a id="newKBUrl" href="{{ portal.solutions_home_url }}">
+              {% if portal.current_language.code == "en" %}
+              Knowledge Base
+              {% elsif portal.current_language.code == "fr" %}
+              Base de connaissances
+              {% elsif portal.current_language.code == "fil" %}
+              Base ng Kaalaman
+              {% elsif portal.current_language.code == "de" %}
+              Wissensbasis
+              {% elsif portal.current_language.code == "ar" %}
+              قاعدة المعرفة
+              {% elsif portal.current_language.code == "bg" %}
+              Знание
+              {% elsif portal.current_language.code == "zh-CN" %}
+              知识库
+              {% elsif portal.current_language.code == "zh-TW" %}
+              知識庫
+              {% elsif portal.current_language.code == "hr" %}
+              Baza znanja
+              {% elsif portal.current_language.code == "cs" %}
+              Znalostní báze
+              {% elsif portal.current_language.code == "da" %}
+              Vidensbase
+              {% elsif portal.current_language.code == "fi" %}
+              Tietopohja
+              {% elsif portal.current_language.code == "nl" %}
+              Kennis basis
+              {% elsif portal.current_language.code == "el" %}
+              Βάση γνώσεων
+              {% elsif portal.current_language.code == "he" %}
+              בסיס ידע
+              {% elsif portal.current_language.code == "hu" %}
+              Tudásbázis
+              {% elsif portal.current_language.code == "id" %}
+              Dasar pengetahuan
+              {% elsif portal.current_language.code == "it" %}
+              base di conoscenza
+              {% elsif portal.current_language.code == "ja-JP" %}
+              知識ベース
+              {% elsif portal.current_language.code == "ko" %}
+              기술 자료
+              {% elsif portal.current_language.code == "ms" %}
+              Asas pengetahuan
+              {% elsif portal.current_language.code == "nb-NO" %}
+              Kunnskapsbase
+              {% elsif portal.current_language.code == "pl" %}
+              Baza wiedzy
+              {% elsif portal.current_language.code == "pt-BR" %}
+              Base de conhecimento
+              {% elsif portal.current_language.code == "pt-PT" %}
+              Base de conhecimento
+              {% elsif portal.current_language.code == "ro" %}
+              Bază de cunoștințe
+              {% elsif portal.current_language.code == "sk" %}
+              Vedomostná základňa
+              {% elsif portal.current_language.code == "sl" %}
+              Baza znanja
+              {% elsif portal.current_language.code == "es" %}
+              Base de conocimientos
+              {% elsif portal.current_language.code == "sv-SE" %}
+              Kunskapsbas
+              {% elsif portal.current_language.code == "th" %}
+              ฐานความรู้
+              {% elsif portal.current_language.code == "tr" %}
+              Bilgi tabanı
+              {% elsif portal.current_language.code == "uk" %}
+              База знань
+              {% elsif portal.current_language.code == "vi" %}
+              Kiến thức cơ bản
+              {% endif %}
+            </a>
+          </li>
+          <li>
+            <a id="contact-form-2-btn">
+              <span class="d-md-none icon-{{tab.tab_type}}"></span>
+              {% if portal.current_language.code == "en" %}
+              Contact Form
+              {% elsif portal.current_language.code == "fr" %}
+              Formulaire de contact
+              {% elsif portal.current_language.code == "de" %}
+              Kontaktformular
+              {% elsif portal.current_language.code == "ar" %}
+              نموذج الاتصال
+              {% elsif portal.current_language.code == "bg" %}
+              Форма за контакти
+              {% elsif portal.current_language.code == "zh-CN" %}
+              联系表
+              {% elsif portal.current_language.code == "zh-TW" %}
+              聯繫表
+              {% elsif portal.current_language.code == "hr" %}
+              Obrazac za kontakt
+              {% elsif portal.current_language.code == "cs" %}
+              Kontaktní formulář
+              {% elsif portal.current_language.code == "da" %}
+              Kontaktformular
+              {% elsif portal.current_language.code == "fi" %}
+              Yhteydenottolomake
+              {% elsif portal.current_language.code == "nl" %}
+              Contactformulier
+              {% elsif portal.current_language.code == "el" %}
+              Φόρμα επικοινωνίας
+              {% elsif portal.current_language.code == "he" %}
+              טופס יצירת קשר
+              {% elsif portal.current_language.code == "hu" %}
+              Kapcsolatfelvételi űrlap
+              {% elsif portal.current_language.code == "id" %}
+              Formulir kontak
+              {% elsif portal.current_language.code == "it" %}
+              Modulo di contatto
+              {% elsif portal.current_language.code == "ja-JP" %}
+              お問合せフォーム
+              {% elsif portal.current_language.code == "ko" %}
+              문의 양식
+              {% elsif portal.current_language.code == "ms" %}
+              Borang pertanyaan
+              {% elsif portal.current_language.code == "nb-NO" %}
+              Kontaktskjema
+              {% elsif portal.current_language.code == "pl" %}
+              Formularz kontaktowy
+              {% elsif portal.current_language.code == "pt-BR" %}
+              Formulário de contato
+              {% elsif portal.current_language.code == "pt-PT" %}
+              Formulário de contacto
+              {% elsif portal.current_language.code == "ro" %}
+              Formular de contact
+              {% elsif portal.current_language.code == "sk" %}
+              Kontaktný formulár
+              {% elsif portal.current_language.code == "sl" %}
+              Kontaktni obrazec
+              {% elsif portal.current_language.code == "es" %}
+              Formulario de contacto
+              {% elsif portal.current_language.code == "sv-SE" %}
+              Kontaktformulär
+              {% elsif portal.current_language.code == "th" %}
+              แบบฟอร์มการติดต่อ
+              {% elsif portal.current_language.code == "tr" %}
+              İletişim formu
+              {% elsif portal.current_language.code == "uk" %}
+              Форма для контактів
+              {% elsif portal.current_language.code == "vi" %}
+              Biểu mẫu liên hệ
+              {% endif %}
+            </a>
+          </li>
+          <li>
+            {{portal | header_language_list }}
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+  <div class="nav-overlay d-none"></div>
+</header>
+
+<script>
+  const toggleButton = document.getElementsByClassName('toggle-button')[0]
+  const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+  toggleButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active')
+  })
+</script>
+
+<script>
+  // Call the updateLink() function to update the link
+  updateLink();
+</script>

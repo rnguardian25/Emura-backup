@@ -1,0 +1,86 @@
+<section class="fw-sticky fw-searchbar-wrapper">
+  <div class="container">
+    <div class="row align-items-center py-8">
+      <div class="col-md-6">
+        {% element 'secondary_nav' %}
+        {
+        "breadcrumbs": [{ "label":"{{ 'portal_translations.header.tabs.home' | t }}", "url":"{{portal.home_url}}" },
+        { "label":"{{ 'portal_translations.header.tabs.solutions' | t }}", "url":"{{ portal.solutions_home_url }}" },
+        { "label": "{{ article.category.name | escape_once }}", "url":"{{ article.category.url }}" },
+        { "label": "{{ article.folder.name | escape_once }}", "url":"{{ article.folder.url }}" },
+        { "label": "{{ article.title | escape_once }}", "url":"{{ article.url }}" }]
+        }
+        {% endelement %}
+      </div>
+      <div class="col-md-4 ms-auto">
+        {{ portal | search_element }}
+      </div>
+    </div>
+  </div>
+</section>
+{{page_message}}
+
+<section class="container-fluid py-24 px-0 py-lg-30 mb-64">
+  <div class="container fw-wrapper-shadow px-0 bg-light">
+
+    <div class="row mx-0 g-0">
+      <div class="col-lg-9 fw-content-wrapper mb-lg-0">
+
+        <div class="fw-content line-numbers">
+          <h1 class="fw-page-title pb-8">{{ article.title }}</h1>
+          <p class="title-underline"> </p>
+          {{ article.body }}
+          {{ article | attachments }}
+        </div>
+        <span class="text-nowrap text-truncate" style="display: inline-block; width: 100%;">
+          <!-- {{ article | solution_article_feedback }} -->
+        </span>
+      </div>
+
+      <div class="col-lg-3 fw-sidebar-wrapper">
+        <aside class="bg-grey fw-sidebar">
+          <div class="print mb-20">
+            <a href="javascript:print()"><span class="icon-print pe-8"></span>{{ 'portal_translations.print' | t }}</a>
+          </div>
+
+          <section class="mb-20">
+            <h2 class="mb-12 fs-20 semi-bold">{{ 'portal_translations.solutions.folder_articles' | t }}</h2>
+            <ul class="fw-no-bullet">
+              {% for article in article.folder.articles limit:4 %}
+              <li>
+                {% element 'link' %}
+                {
+                "url": "{{ article.url }}",
+                "class": "fw-article",
+                "content": "{{ article.title | escape_once }}"
+                }
+                {% endelement %}
+              </li>
+              {% endfor %}
+            </ul>
+          </section>
+
+          {% if article.related_articles.size > 0 %}
+          <section class="mb-20">
+            <h2 class="mb-12 fs-20 semi-bold">{{ 'portal_translations.solutions.similar_articles' | t }}</h2>
+            <ul class="fw-no-bullet">
+              {% for article in article.related_articles limit:4 %}
+              <li>
+                {% element 'link' %}
+                {
+                "url": "{{ article.url }}",
+                "class": "fw-article",
+                "content": "{{ article.title | escape_once }}"
+                }
+                {% endelement %}
+              </li>
+              {% endfor %}
+            </ul>
+          </section>
+          {% endif %}
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+{% element 'lightbox_modal' %}{}{% endelement %}

@@ -1,0 +1,359 @@
+ <script>
+  // Redirect immediately
+  //window.location.href = "https://www.example.com";
+
+  // Or with a delay
+  setTimeout(() => {
+    window.location.href = "https://emura-pan.com/contact-2";
+  }, 5000); // 5-second delay
+</script>
+<section class="redirect-section">
+  <div class="redirect-container">
+    <div class="redirect-content">
+      <!-- Left Column -->
+      <div class="redirect-text-content">
+        <h2 class="redirect-title">
+          {% if portal.current_language.code == "en" %}
+          Lost your way?
+          {% elsif portal.current_language.code == "fr" %}
+          Vous êtes perdu ?
+          {% elsif portal.current_language.code == "fil" %}
+          Naligaw ka ba?
+          {% elsif portal.current_language.code == "de" %}
+          Hast du dich verirrt?
+          {% elsif portal.current_language.code == "ar" %}
+          هل ضللت طريقك؟
+          {% elsif portal.current_language.code == "bg" %}
+          Изгубихте ли пътя си?
+          {% elsif portal.current_language.code == "zh-CN" %}
+          迷路了吗？
+          {% elsif portal.current_language.code == "zh-TW" %}
+          迷路了嗎？
+          {% elsif portal.current_language.code == "hr" %}
+          Izgubili ste put?
+          {% elsif portal.current_language.code == "cs" %}
+          Ztratili jste cestu?
+          {% elsif portal.current_language.code == "da" %}
+          Er du faret vild?
+          {% elsif portal.current_language.code == "fi" %}
+          Oletko eksynyt?
+          {% elsif portal.current_language.code == "nl" %}
+          Verdwaald?
+          {% elsif portal.current_language.code == "el" %}
+          Έχετε χαθεί;
+          {% elsif portal.current_language.code == "he" %}
+          איבדת את הדרך?
+          {% elsif portal.current_language.code == "hu" %}
+          Eltévedtél?
+          {% elsif portal.current_language.code == "id" %}
+          Tersesat?
+          {% elsif portal.current_language.code == "it" %}
+          Ti sei perso?
+          {% elsif portal.current_language.code == "ja-JP" %}
+          道に迷いましたか？
+          {% elsif portal.current_language.code == "ko" %}
+          길을 잃으셨나요?
+          {% elsif portal.current_language.code == "ms" %}
+          Hilang arah?
+          {% elsif portal.current_language.code == "nb-NO" %}
+          Har du gått deg vill?
+          {% elsif portal.current_language.code == "pl" %}
+          Zgubiłeś się?
+          {% elsif portal.current_language.code == "pt-BR" %}
+          Perdeu-se no caminho?
+          {% elsif portal.current_language.code == "pt-PT" %}
+          Perdeu-se no caminho?
+          {% elsif portal.current_language.code == "ro" %}
+          Te-ai pierdut?
+          {% elsif portal.current_language.code == "sk" %}
+          Stratili ste cestu?
+          {% elsif portal.current_language.code == "sl" %}
+          Ste izgubili pot?
+          {% elsif portal.current_language.code == "es" %}
+          ¿Te has perdido?
+          {% elsif portal.current_language.code == "sv-SE" %}
+          Har du gått vilse?
+          {% elsif portal.current_language.code == "th" %}
+          คุณหลงทางหรือเปล่า?
+          {% elsif portal.current_language.code == "tr" %}
+          Yolunu mu kaybettin?
+          {% elsif portal.current_language.code == "uk" %}
+          Ви заблукали?
+          {% elsif portal.current_language.code == "vi" %}
+          Bạn lạc đường à?
+          {% endif %}
+        </h2>
+        <p class="redirect-text">
+          {% if portal.current_language.code == "en" %}
+          We are redirecting you to our new contact page — this may take up to 10 seconds.
+          {% elsif portal.current_language.code == "fr" %}
+          Nous vous redirigeons vers notre nouvelle page de contact — cela peut prendre jusqu’à 10 secondes.
+          {% elsif portal.current_language.code == "fil" %}
+          Idinedirekta namin kayo sa aming bagong pahina ng contact—maaaring tumagal ito nang hanggang 10 segundo.
+          {% elsif portal.current_language.code == "de" %}
+          Wir leiten Sie zu unserer neuen Kontaktseite weiter – dies kann bis zu 10 Sekunden dauern.
+          {% elsif portal.current_language.code == "ar" %}
+          نقوم بإعادة توجيهك إلى صفحة الاتصال الجديدة الخاصة بنا — قد يستغرق هذا ما يصل إلى 10 ثوانٍ.
+          {% elsif portal.current_language.code == "bg" %}
+          Пренасочваме Ви към нашата нова страница за контакт — това може да отнеме до 10 секунди.
+          {% elsif portal.current_language.code == "zh-CN" %}
+          我们正在将您重定向到我们的新联系人页面——这可能需要最长 10 秒钟的时间。
+          {% elsif portal.current_language.code == "zh-TW" %}
+          我們正在將您重新導向至我們的新聯絡頁面——這可能需要最長 10 秒鐘的時間。
+          {% elsif portal.current_language.code == "hr" %}
+          Preusmjeravamo vas na našu novu kontakt stranicu — to može potrajati do 10 sekundi.
+          {% elsif portal.current_language.code == "cs" %}
+          Přesměrováváme vás na naši novou kontaktní stránku — může to trvat až 10 sekund.
+          {% elsif portal.current_language.code == "da" %}
+          Vi omdirigerer dig til vores nye kontaktside — dette kan tage op til 10 sekunder.
+          {% elsif portal.current_language.code == "fi" %}
+          Ohjaamme sinut uudelle yhteyssivullemme — tämä voi kestää jopa 10 sekuntia.
+          {% elsif portal.current_language.code == "nl" %}
+          We leiden u om naar onze nieuwe contactpagina — dit kan tot 10 seconden duren.
+          {% elsif portal.current_language.code == "el" %}
+          Σας ανακατευθύνουμε στη νέα σελίδα επικοινωνίας μας — αυτό μπορεί να διαρκέσει έως 10 δευτερόλεπτα.
+          {% elsif portal.current_language.code == "he" %}
+          אנו מפנים אותך לדף יצירת הקשר החדש שלנו — זה עשוי להימשך עד 10 שניות.
+          {% elsif portal.current_language.code == "hu" %}
+          Átirányítjuk Önt az új kapcsolatfelvételi oldalunkra — ez akár 10 másodpercet is igénybe vehet.
+          {% elsif portal.current_language.code == "id" %}
+          Kami sedang mengarahkan Anda ke halaman kontak baru kami — proses ini dapat memakan waktu hingga 10 detik.
+          {% elsif portal.current_language.code == "it" %}
+          La stiamo reindirizzando alla nostra nuova pagina dei contatti — questo potrebbe richiedere fino a 10 secondi.
+          {% elsif portal.current_language.code == "ja-JP" %}
+          新しいお問い合わせページへリダイレクトしています。最大で10秒ほどかかる場合があります。
+          {% elsif portal.current_language.code == "ko" %}
+          새로운 문의 페이지로 리디렉션 중입니다. 최대 10초 정도 소요될 수 있습니다.
+          {% elsif portal.current_language.code == "ms" %}
+          Kami sedang mengalihkan anda ke halaman hubungan baharu kami — ini mungkin mengambil masa sehingga 10 saat.
+          {% elsif portal.current_language.code == "nb-NO" %}
+          Vi omdirigerer deg til vår nye kontaktside — dette kan ta opptil 10 sekunder.
+          {% elsif portal.current_language.code == "pl" %}
+          Przekierowujemy Cię na naszą nową stronę kontaktową — może to zająć do 10 sekund.
+          {% elsif portal.current_language.code == "pt-BR" %}
+          Estamos redirecionando você para nossa nova página de contato — isso pode levar até 10 segundos.
+          {% elsif portal.current_language.code == "pt-PT" %}
+          Estamos a redirecioná-lo para a nossa nova página de contacto — isto pode demorar até 10 segundos.
+          {% elsif portal.current_language.code == "ro" %}
+          Vă redirecționăm către noua noastră pagină de contact — acest proces poate dura până la 10 secunde.
+          {% elsif portal.current_language.code == "sk" %}
+          Presmerovávame vás na našu novú kontaktnú stránku – môže to trvať až 10 sekúnd.
+          {% elsif portal.current_language.code == "sl" %}
+          Preusmerjamo vas na našo novo kontaktno stran — to lahko traja do 10 sekund.
+          {% elsif portal.current_language.code == "es" %}
+          Le estamos redirigiendo a nuestra nueva página de contacto — esto puede tardar hasta 10 segundos.
+          {% elsif portal.current_language.code == "sv-SE" %}
+          Vi vidarebefordrar dig till vår nya kontaktsida — detta kan ta upp till 10 sekunder.
+          {% elsif portal.current_language.code == "th" %}
+          เรากำลังนำคุณไปยังหน้าติดต่อใหม่ของเรา — อาจใช้เวลาสูงสุดถึง 10 วินาที
+          {% elsif portal.current_language.code == "tr" %}
+          Sizi yeni iletişim sayfamıza yönlendiriyoruz — bu işlem 10 saniyeye kadar sürebilir.
+          {% elsif portal.current_language.code == "uk" %}
+          Ми перенаправляємо вас на нашу нову контактну сторінку — це може зайняти до 10 секунд.
+          {% elsif portal.current_language.code == "vi" %}
+          Chúng tôi đang chuyển hướng bạn đến trang liên hệ mới của chúng tôi — quá trình này có thể mất đến 10 giây.
+          {% endif %}
+        </p>
+        <p class="redirect-link">
+          {% if portal.current_language.code == "en" %}
+          If the page doesn't redirect automatically, please
+          {% elsif portal.current_language.code == "fr" %}
+          Si la page ne se redirige pas automatiquement, veuillez
+          {% elsif portal.current_language.code == "fil" %}
+          Kung hindi awtomatikong ma-redirect ang pahina, mangyaring
+          {% elsif portal.current_language.code == "de" %}
+          Wenn die Seite nicht automatisch weiterleitet, bitte
+          {% elsif portal.current_language.code == "ar" %}
+          إذا لم يتم إعادة توجيه الصفحة تلقائيًا، يرجى
+          {% elsif portal.current_language.code == "bg" %}
+          Ако страницата не се пренасочи автоматично, моля
+          {% elsif portal.current_language.code == "zh-CN" %}
+          如果页面未自动重定向，请
+          {% elsif portal.current_language.code == "zh-TW" %}
+          如果頁面未自動重新導向，請
+          {% elsif portal.current_language.code == "hr" %}
+          Ako se stranica ne preusmjeri automatski, molimo
+          {% elsif portal.current_language.code == "cs" %}
+          Pokud se stránka nepřesměruje automaticky, prosím
+          {% elsif portal.current_language.code == "da" %}
+          Hvis siden ikke omdirigerer automatisk, bedes du
+          {% elsif portal.current_language.code == "fi" %}
+          Jos sivu ei ohjaudu automaattisesti, ole hyvä ja
+          {% elsif portal.current_language.code == "nl" %}
+          Als de pagina niet automatisch wordt doorgestuurd, graag
+          {% elsif portal.current_language.code == "el" %}
+          Εάν η σελίδα δεν ανακατευθύνεται αυτόματα, παρακαλώ
+          {% elsif portal.current_language.code == "he" %}
+          אם הדף לא מפנה אוטומטית, אנא
+          {% elsif portal.current_language.code == "hu" %}
+          Ha az oldal nem irányít át automatikusan, kérjük
+          {% elsif portal.current_language.code == "id" %}
+          Jika halaman tidak mengarahkan secara otomatis, harap
+          {% elsif portal.current_language.code == "it" %}
+          Se la pagina non si reindirizza automaticamente, per favore
+          {% elsif portal.current_language.code == "ja-JP" %}
+          ページが自動的にリダイレクトされない場合は、
+          {% elsif portal.current_language.code == "ko" %}
+          페이지가 자동으로 리디렉션되지 않으면
+          {% elsif portal.current_language.code == "ms" %}
+          Jika halaman tidak mengalihkan secara automatik, sila
+          {% elsif portal.current_language.code == "nb-NO" %}
+          Hvis siden ikke omdirigerer automatisk, vennligst
+          {% elsif portal.current_language.code == "pl" %}
+          Jeśli strona nie przekierowuje automatycznie, proszę
+          {% elsif portal.current_language.code == "pt-BR" %}
+          Se a página não redirecionar automaticamente, por favor
+          {% elsif portal.current_language.code == "pt-PT" %}
+          Se a página não redirecionar automaticamente, por favor
+          {% elsif portal.current_language.code == "ro" %}
+          Dacă pagina nu se redirecționează automat, vă rugăm
+          {% elsif portal.current_language.code == "sk" %}
+          Ak sa stránka automaticky nepresmeruje, prosím
+          {% elsif portal.current_language.code == "sl" %}
+          Če se stran ne preusmeri samodejno, prosimo
+          {% elsif portal.current_language.code == "es" %}
+          Si la página no se redirige automáticamente, por favor
+          {% elsif portal.current_language.code == "sv-SE" %}
+          Om sidan inte omdirigeras automatiskt, vänligen
+          {% elsif portal.current_language.code == "th" %}
+          หากหน้าไม่ได้เปลี่ยนเส้นทางโดยอัตโนมัติ โปรด
+          {% elsif portal.current_language.code == "tr" %}
+          Sayfa otomatik olarak yönlendirilmezse, lütfen
+          {% elsif portal.current_language.code == "uk" %}
+          Якщо сторінка не перенаправляється автоматично, будь ласка
+          {% elsif portal.current_language.code == "vi" %}
+          Nếu trang không tự động chuyển hướng, vui lòng
+          {% endif %}
+          <a href="https://emura-pan.com/contact-2">
+            {% if portal.current_language.code == "en" %}
+            click here
+            {% elsif portal.current_language.code == "fr" %}
+            cliquez ici
+            {% elsif portal.current_language.code == "fil" %}
+            i-click dito
+            {% elsif portal.current_language.code == "de" %}
+            klicken Sie hier
+            {% elsif portal.current_language.code == "ar" %}
+            انقر هنا
+            {% elsif portal.current_language.code == "bg" %}
+            щракнете тук
+            {% elsif portal.current_language.code == "zh-CN" %}
+            点击这里
+            {% elsif portal.current_language.code == "zh-TW" %}
+            點擊這裡
+            {% elsif portal.current_language.code == "hr" %}
+            kliknite ovdje
+            {% elsif portal.current_language.code == "cs" %}
+            klikněte zde
+            {% elsif portal.current_language.code == "da" %}
+            klik her
+            {% elsif portal.current_language.code == "fi" %}
+            napsauta tästä
+            {% elsif portal.current_language.code == "nl" %}
+            klik hier
+            {% elsif portal.current_language.code == "el" %}
+            κάντε κλικ εδώ
+            {% elsif portal.current_language.code == "he" %}
+            לחץ כאן
+            {% elsif portal.current_language.code == "hu" %}
+            kattintson ide
+            {% elsif portal.current_language.code == "id" %}
+            klik di sini
+            {% elsif portal.current_language.code == "it" %}
+            clicca qui
+            {% elsif portal.current_language.code == "ja-JP" %}
+            ここをクリック
+            {% elsif portal.current_language.code == "ko" %}
+            여기를 클릭하세요
+            {% elsif portal.current_language.code == "ms" %}
+            klik di sini
+            {% elsif portal.current_language.code == "nb-NO" %}
+            klikk her
+            {% elsif portal.current_language.code == "pl" %}
+            kliknij tutaj
+            {% elsif portal.current_language.code == "pt-BR" %}
+            clique aqui
+            {% elsif portal.current_language.code == "pt-PT" %}
+            clique aqui
+            {% elsif portal.current_language.code == "ro" %}
+            faceți clic aici
+            {% elsif portal.current_language.code == "sk" %}
+            kliknite sem
+            {% elsif portal.current_language.code == "sl" %}
+            kliknite tukaj
+            {% elsif portal.current_language.code == "es" %}
+            haz clic aquí
+            {% elsif portal.current_language.code == "sv-SE" %}
+            klicka här
+            {% elsif portal.current_language.code == "th" %}
+            คลิกที่นี่
+            {% elsif portal.current_language.code == "tr" %}
+            buraya tıklayın
+            {% elsif portal.current_language.code == "uk" %}
+            натисніть тут
+            {% elsif portal.current_language.code == "vi" %}
+            nhấp vào đây
+            {% endif %}
+          </a></p>   
+      </div>
+
+      <!-- Right Column -->
+      <div class="redirect-image">
+        <img src="https://dl.dropboxusercontent.com/s/f7scmh97buanuft5jo6ud/redirect-img.png?rlkey=d3cwngrgrthmlcsipnrkjo4r5&st=eprsnixk&dl=0" alt="Placeholder Image" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="fw-sticky fw-searchbar-wrapper">
+    <div class="container">
+      <div class="row align-items-center py-24">
+        <div class="col-md-6">
+          {% element 'secondary_nav' %}
+           {
+             "breadcrumbs": [
+                { "label":"{{ 'portal_translations.header.tabs.home' | t }}", "url":"{{portal.home_url}}" },
+                { "label":"{{ "portal_translations.tickets.new.title" | t }}", "url":"{{portal.new_ticket_url}}" }
+              ]
+           }
+         {% endelement %}
+        </div>
+        <div class="col-md-4 ms-auto">
+          {{ portal | search_element }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+	<section class="container-fluid px-0">
+      <div class="container">
+	     <div class="col-lg-3 fw-sidebar-wrapper d-none">
+            {% snippet new_ticket_sidebar %}
+        </div>
+      </div>
+	</section>
+
+  <section class="container-fluid px-0 fw-page-title-wrapper">
+    <div class="container">
+      <div class="pt-24 pt-lg-60 mx-0 fw-search-meta-info g-0">
+        <div class="text-start">
+          <h2 class="fw-page-title">{{ "portal_translations.tickets.new.title" | t}}</h2>
+          <p class="title-underline pt-12"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid pt-32 pb-60">
+      <div class="container px-0">
+        {{ page_message }}
+        <div class="row mx-0 g-0 px-32">
+          <div class="col-lg-12 fw-content-wrapper mb-16 mb-lg-0">
+            <div class="fw-content fw-new-ticket">
+             {% snippet new_ticket_form %}
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+{% element 'code_insert' %}{}{% endelement %} -->
