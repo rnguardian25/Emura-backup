@@ -4,7 +4,7 @@
 </section>
 
 <!-- Search Box -->
-<section class="container-fluid px-0 fw-helpcenter mb-md-n64">
+<section class="container-fluid px-0 fw-helpcenter mb-md-64">
   <div class="container">
     <div class="row">
       <div class="col-md-9 col-lg-6 mx-auto">
@@ -94,19 +94,100 @@
 </section>
 {% endif %}
 
-<!-- Video -->
-<section class="container-fluid px-0 mb-60 mt-md-16">
-  <div class="container">
-    <div class="collection">
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
+<section class="container-fluid px-0 mb-64 mt-md-16">
+  <div class="container swiper">
 
-          <div class="content swiper-slide">
-            <video controls playsinline id="video1" class="product-video" poster="https://dl.dropboxusercontent.com/s/wcniiiax8zdol2jwizes9/Frying-Pan-Unboxing.png?rlkey=2323sdw4j9w955vfa1fg69rdk&st=p4jcci8j&dl=0">
-              <source src="https://dl.dropboxusercontent.com/s/i93mxdogswlut0h3sr0bo/Frying-Pan-Unboxing.mp4?rlkey=9tfbzrjgmmru5d99qb6pmgdts&st=nft66n2x&dl=0" type="video/mp4">
-            </video>
-            <div class="text-content">
-              <h3>
+    <h2 class="h2 h-md3 fw-bold mb-16 section-title text-center">
+      {% if portal.current_language.code == "en" %}
+      Educational Videos
+      {% elsif portal.current_language.code == "ar" %}
+      مقاطع فيديو تعليمية
+      {% elsif portal.current_language.code == "bg" %}
+      Образователни видеоклипове
+      {% elsif portal.current_language.code == "cs" %}
+      Vzdělávací videa
+      {% elsif portal.current_language.code == "da" %}
+      Undervisningsvideoer
+      {% elsif portal.current_language.code == "de" %}
+      Lehrvideos
+      {% elsif portal.current_language.code == "el" %}
+      Εκπαιδευτικά βίντεο
+      {% elsif portal.current_language.code == "es" %}
+      Vídeos educativos
+      {% elsif portal.current_language.code == "fi" %}
+      Opetusvideot
+      {% elsif portal.current_language.code == "fil" %}
+      Mga Video Pang-edukasyon
+      {% elsif portal.current_language.code == "fr" %}
+      Vidéos éducatives
+      {% elsif portal.current_language.code == "he" %}
+      סרטונים חינוכיים
+      {% elsif portal.current_language.code == "hr" %}
+      Edukativni videozapisi
+      {% elsif portal.current_language.code == "hu" %}
+      Oktatóvideók
+      {% elsif portal.current_language.code == "id" %}
+      Video Edukasi
+      {% elsif portal.current_language.code == "it" %}
+      Video educativi
+      {% elsif portal.current_language.code == "ja-JP" %}
+      教育ビデオ
+      {% elsif portal.current_language.code == "ko" %}
+      교육 비디오
+      {% elsif portal.current_language.code == "ms" %}
+      Video Pendidikan
+      {% elsif portal.current_language.code == "nb-NO" %}
+      Opplæringsvideoer
+      {% elsif portal.current_language.code == "nl" %}
+      Educatieve video's
+      {% elsif portal.current_language.code == "pl" %}
+      Filmy edukacyjne
+      {% elsif portal.current_language.code == "pt-BR" %}
+      Vídeos educacionais
+      {% elsif portal.current_language.code == "pt-PT" %}
+      Vídeos educativos
+      {% elsif portal.current_language.code == "ro" %}
+      Videoclipuri educaționale
+      {% elsif portal.current_language.code == "sk" %}
+      Vzdelávacie videá
+      {% elsif portal.current_language.code == "sl" %}
+      Izobraževalni videoposnetki
+      {% elsif portal.current_language.code == "sv-SE" %}
+      Utbildningsvideor
+      {% elsif portal.current_language.code == "sr" %}
+      Edukativni video snimci
+      {% elsif portal.current_language.code == "th" %}
+      วิดีโอการศึกษา
+      {% elsif portal.current_language.code == "tr" %}
+      Eğitim Videoları
+      {% elsif portal.current_language.code == "uk" %}
+      Навчальні відео
+      {% elsif portal.current_language.code == "vi" %}
+      Video giáo dục
+      {% elsif portal.current_language.code == "zh-CN" %}
+      教育视频
+      {% elsif portal.current_language.code == "zh-TW" %}
+      教育影片
+      {% endif %}
+    </h2>
+
+    <div class="slide-container">
+      <div class="video-playlist swiper-wrapper">
+
+        <!-- Video 1 -->
+        <div class="video-list swiper-slide">
+          <div class="video-wrap">
+            <div class="vimeo-embed">
+              <iframe
+                      src="https://player.vimeo.com/video/1147419678?controls=1&title=0&byline=0&portrait=0&pip=0&autopause=1"
+                      allow="autoplay; fullscreen; encrypted-media;"
+                      frameborder="0"
+                      ></iframe>
+            </div>
+          </div>
+          <div class="video-details pt-1 px-2 text-start">
+            <div class="video-text">
+              <p class="video-title mb-1 fw-semibold">
                 {% if portal.current_language.code == "en" %}
                 Frying Pan - Unboxing
                 {% elsif portal.current_language.code == "de" %}
@@ -138,16 +219,24 @@
                 {% elsif portal.current_language.code == "sv-SE" %}
                 Stekpanna – Uppackning
                 {% endif %}
-              </h3>
+              </p>
             </div>
           </div>
+        </div>
 
-          <div class="content swiper-slide">
-            <video controls playsinline id="video2" class="product-video" poster="https://dl.dropboxusercontent.com/s/voneeazp3k8y7s2uynp1l/Frying-Pan-Specifications.png?rlkey=07e2jttodrmvocjnsqig86x6n&st=20o169d6&dl=0">
-              <source src="https://dl.dropboxusercontent.com/s/95d3t0ljkt1qm9gh088ua/Frying-Pan-Specifications.mp4?rlkey=29k6ix2x768rw2hvs1ii11gqc&st=3l0b7pai&dl=0" type="video/mp4">
-            </video>
-            <div class="text-content">
-              <h3>
+        <!-- Video 2 -->
+        <div class="video-list swiper-slide">
+          <div class="video-wrap">
+            <div class="vimeo-embed">
+              <iframe
+                      src="https://player.vimeo.com/video/1147419560?controls=1&title=0&byline=0&portrait=0&pip=0&autopause=1"
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                      ></iframe>
+            </div>
+          </div>
+          <div class="video-details pt-1 px-2 text-start">
+            <div class="video-text">
+              <p class="video-title mb-1 fw-semibold">
                 {% if portal.current_language.code == "en" %}
                 Frying Pan - Specifications
                 {% elsif portal.current_language.code == "de" %}
@@ -179,16 +268,24 @@
                 {% elsif portal.current_language.code == "sv-SE" %}
                 Stekpanna – Specifikationer
                 {% endif %}
-              </h3>
+              </p>
             </div>
           </div>
+        </div>
 
-          <div class="content swiper-slide">
-            <video controls playsinline id="video3" class="product-video" poster="https://dl.dropboxusercontent.com/s/y5pcorkfkwxk4hb9jflpq/Frying-Pan-Features.png?rlkey=lkk05tqir23bh9hj6a3v9jxzc&st=1gk8j36i&dl=0">
-              <source src="https://dl.dropboxusercontent.com/s/mnxpyjtethee8ndgeds4d/Frying-Pan-Features.mp4?rlkey=mzvuef64lc5nkrp1je1m81yly&st=anv54bwz&dl=0" type="video/mp4">
-            </video>
-            <div class="text-content">
-              <h3>
+        <!-- Video 3 -->
+        <div class="video-list swiper-slide">
+          <div class="video-wrap">
+            <div class="vimeo-embed">
+              <iframe
+                      src="https://player.vimeo.com/video/1147419632?controls=1&title=0&byline=0&portrait=0&pip=0&autopause=1"
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                      ></iframe>
+            </div>
+          </div>
+          <div class="video-details pt-1 px-2 text-start">
+            <div class="video-text">
+              <p class="video-title mb-1 fw-semibold">
                 {% if portal.current_language.code == "en" %}
                 Frying Pan - Features and Functions
                 {% elsif portal.current_language.code == "de" %}
@@ -220,16 +317,25 @@
                 {% elsif portal.current_language.code == "sv-SE" %}
                 Stekpanna – Egenskaper och funktioner
                 {% endif %}
-              </h3>
+              </p>
             </div>
           </div>
+        </div>
 
-          <div class="content swiper-slide">
-            <video controls playsinline id="video4" class="product-video" poster="https://dl.dropboxusercontent.com/s/4dxysmpldlzkee92oixir/Standing-Lid-Unboxing.png?rlkey=tyoly8svgelk6688p8bb90uwe&st=qvb2utjk&dl=0">
-              <source src="https://dl.dropboxusercontent.com/s/1ltrkc6l3jq95nnmpdgjt/Lid-Unboxing.mp4?rlkey=qxck68fjmj9xk1t9m9tinxpew&st=9m7b35cd&dl=0" type="video/mp4">
-            </video>
-            <div class="text-content">
-              <h3>
+        <!-- Video 4 -->
+        <div class="video-list swiper-slide">
+          <div class="video-wrap">
+            <div class="vimeo-embed">
+              <iframe
+                      src="https://player.vimeo.com/video/1147419470?controls=1&title=0&byline=0&portrait=0&pip=0&autopause=1"
+                      allow="autoplay; fullscreen; encrypted-media;"
+                      frameborder="0"
+                      ></iframe>
+            </div>
+          </div>
+          <div class="video-details pt-1 px-2 text-start">
+            <div class="video-text">
+              <p class="video-title mb-1 fw-semibold">
                 {% if portal.current_language.code == "en" %}
                 Standing Lid - Unboxing
                 {% elsif portal.current_language.code == "de" %}
@@ -261,16 +367,25 @@
                 {% elsif portal.current_language.code == "sv-SE" %}
                 Stående lock – Uppackning
                 {% endif %}
-              </h3>
+              </p>
             </div>
           </div>
+        </div>
 
-          <div class="content swiper-slide">
-            <video controls playsinline id="video5" class="product-video" poster="https://dl.dropboxusercontent.com/s/dhg8o9ya0txg8tkf7aesg/Standing-Lid-Specifications.png?rlkey=m68yj9q9ciwtv2fwsfkn5g2jh&st=uyfacz84&dl=0">
-              <source src="https://dl.dropboxusercontent.com/s/tli5b0cj7af3ung5eh44l/Lid-Specs.mp4?rlkey=owxxtuytrdgi571fkmdd44hdg&st=mupu5i2d&dl=0" type="video/mp4">
-            </video>
-            <div class="text-content">
-              <h3>
+        <!-- Video 5 -->
+        <div class="video-list swiper-slide">
+          <div class="video-wrap">
+            <div class="vimeo-embed">
+              <iframe
+                      src="https://player.vimeo.com/video/1147419430?controls=1&title=0&byline=0&portrait=0&pip=0&autopause=1"
+                      allow="autoplay; fullscreen; encrypted-media;"
+                      frameborder="0"
+                      ></iframe>
+            </div>
+          </div>
+          <div class="video-details pt-1 px-2 text-start">
+            <div class="video-text">
+              <p class="video-title mb-1 fw-semibold">
                 {% if portal.current_language.code == "en" %}
                 Standing Lid - Specifications
                 {% elsif portal.current_language.code == "de" %}
@@ -302,16 +417,25 @@
                 {% elsif portal.current_language.code == "sv-SE" %}
                 Stående lock – Specifikationer
                 {% endif %}
-              </h3>
+              </p>
             </div>
           </div>
+        </div>
 
-          <div class="content swiper-slide">
-            <video controls playsinline id="video6" class="product-video" poster="https://dl.dropboxusercontent.com/s/f1h9aduvghammw9po70p9/Utensils-Set-Unboxing.png?rlkey=ewg8lsyh9um5cu1nrcrwaptmb&st=o8mepmxe&dl=0">
-              <source src="https://dl.dropboxusercontent.com/s/rmude2bvlqu0q9ywwgwrz/Utensils-Set-Unboxing.mp4?rlkey=aztwf1ym33w5vqvr1fanm5eu3&st=sdbdpn6w&dl=0" type="video/mp4">
-            </video>
-            <div class="text-content">
-              <h3>
+        <!-- Video 6 -->
+        <div class="video-list swiper-slide">
+          <div class="video-wrap">
+            <div class="vimeo-embed">
+              <iframe
+                      src="https://player.vimeo.com/video/1147419383?controls=1&title=0&byline=0&portrait=0&pip=0&autopause=1"
+                      allow="autoplay; fullscreen; encrypted-media;"
+                      frameborder="0"
+                      ></iframe>
+            </div>
+          </div>
+          <div class="video-details pt-1 px-2 text-start">
+            <div class="video-text">
+              <p class="video-title mb-1 fw-semibold">
                 {% if portal.current_language.code == "en" %}
                 Utensils Set - Unboxing
                 {% elsif portal.current_language.code == "de" %}
@@ -343,16 +467,25 @@
                 {% elsif portal.current_language.code == "sv-SE" %}
                 Köksredskapsset – Uppackning
                 {% endif %}
-              </h3>
+              </p>
             </div>
           </div>
+        </div>
 
-          <div class="content swiper-slide">
-            <video controls playsinline id="video7" class="product-video" poster="https://dl.dropboxusercontent.com/s/oxp44ia7m9wy3iyskfte2/Utensils-Set-Specifications.png?rlkey=kqlu2t67s7t3dcf4pfthjfo27&st=7vd73lgj&dl=0">
-              <source src="https://dl.dropboxusercontent.com/s/szx2z1cn15zcarxnfivb5/Utensils-Set-Specs.mp4?rlkey=qtwhpdtj9x6ecm0b79coim3ip&st=xhkio0k6&dl=0" type="video/mp4">
-            </video>
-            <div class="text-content">
-              <h3>
+        <!-- Video 7 -->
+        <div class="video-list swiper-slide">
+          <div class="video-wrap">
+            <div class="vimeo-embed">
+              <iframe
+                      src="https://player.vimeo.com/video/1147419519?controls=1&title=0&byline=0&portrait=0&pip=0&autopause=1"
+                      allow="autoplay; fullscreen; encrypted-media;"
+                      frameborder="0"
+                      ></iframe>
+            </div>
+          </div>
+          <div class="video-details pt-1 px-2 text-start">
+            <div class="video-text">
+              <p class="video-title mb-1 fw-semibold">
                 {% if portal.current_language.code == "en" %}
                 Utensils Set - Specifications
                 {% elsif portal.current_language.code == "de" %}
@@ -384,16 +517,25 @@
                 {% elsif portal.current_language.code == "sv-SE" %}
                 Köksredskapsset – Specifikationer
                 {% endif %}
-              </h3>
+              </p>
             </div>
           </div>
+        </div>
 
-          <div class="content swiper-slide">
-            <video controls playsinline id="video8" class="product-video" poster="https://dl.dropboxusercontent.com/s/si033ai6dpo4rs4kxm4ap/Heat-Protectant-Set-Unboxing.png?rlkey=vah4ibnlt0xig150vr72q0v3o&st=2nraf60a&dl=0">
-              <source src="https://dl.dropboxusercontent.com/s/b99bg951kq98fw1j3k1rf/Protectant-Set-Unboxing.mp4?rlkey=jlm9xje2gb6od9koyei0cb85b&st=wxncbfk0&dl=0" type="video/mp4">
-            </video>
-            <div class="text-content">
-              <h3>
+        <!-- Video 8 -->
+        <div class="video-list swiper-slide">
+          <div class="video-wrap">
+            <div class="vimeo-embed">
+              <iframe
+                      src="https://player.vimeo.com/video/1147419588?controls=1&title=0&byline=0&portrait=0&pip=0&autopause=1"
+                      allow="autoplay; fullscreen; encrypted-media;"
+                      frameborder="0"
+                      ></iframe>
+            </div>
+          </div>
+          <div class="video-details pt-1 px-2 text-start">
+            <div class="video-text">
+              <p class="video-title mb-1 fw-semibold">
                 {% if portal.current_language.code == "en" %}
                 Heat Protectant Set - Unboxing
                 {% elsif portal.current_language.code == "de" %}
@@ -425,16 +567,25 @@
                 {% elsif portal.current_language.code == "sv-SE" %}
                 Värmeskyddsset – Uppackning
                 {% endif %}
-              </h3>
+              </p>
             </div>
           </div>
+        </div>
 
-          <div class="content swiper-slide">
-            <video controls playsinline id="video9" class="product-video" poster="https://dl.dropboxusercontent.com/s/64pykibm17ca0b3nbet35/Heat-Protectant-Set-Specifications.png?rlkey=0c0ymgkgf7dnve5yj5h1jk6jk&st=n06l1jr8&dl=0">
-              <source src="https://dl.dropboxusercontent.com/s/y9w7zenfbs2eltq93qkpg/Protectant-Set-Specs.mp4?rlkey=dnoxe7wpkqwkc3e1uijvj5ofj&st=w47x6lhd&dl=0" type="video/mp4">
-            </video>
-            <div class="text-content">
-              <h3>
+        <!-- Video 9 -->
+        <div class="video-list swiper-slide">
+          <div class="video-wrap">
+            <div class="vimeo-embed">
+              <iframe
+                      src="https://player.vimeo.com/video/1147419333?controls=1&title=0&byline=0&portrait=0&pip=0&autopause=1"
+                      allow="autoplay; fullscreen; encrypted-media;"
+                      frameborder="0"
+                      ></iframe>
+            </div>
+          </div>
+          <div class="video-details pt-1 px-2 text-start">
+            <div class="video-text">
+              <p class="video-title mb-1 fw-semibold">
                 {% if portal.current_language.code == "en" %}
                 Heat Protectant Set - Specifications
                 {% elsif portal.current_language.code == "de" %}
@@ -466,68 +617,61 @@
                 {% elsif portal.current_language.code == "sv-SE" %}
                 Värmeskyddsset – Specifikationer
                 {% endif %}
-              </h3>
+              </p>
             </div>
           </div>
-
         </div>
-        <div class="swiper-pagination"></div>
+
       </div>
     </div>
+
+    <div class="swiper-button-next swiper-navBtn"></div>
+    <div class="swiper-button-prev swiper-navBtn"></div>
+    <!-- <div class="swiper-pagination"></div> -->
   </div>
+
+  <!-- Vimeo API (load once) -->
+  <script src="https://player.vimeo.com/api/player.js"></script>
+
   <script>
-    var swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      loop: true,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 200,
-        modifier: 2.5,
-        slideShadows: true,
+    var swiper = new Swiper(".slide-container", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      slidesPerGroup: 1,
+      centeredSlides: false,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+      // make sure this is NOT set anywhere else
+      slideToClickedSlide: false,
+      breakpoints: {
+        0:    { slidesPerView: 1 },
+        520:  { slidesPerView: 2 },
+        768:  { slidesPerView: 3 },
+        1000: { slidesPerView: 3 },
       },
       on: {
-        transitionEnd: function () {
-          updateVideoControls();
-        },
-        init: function () {
-          updateVideoControls();
-          addSlideClickListeners();
+        slideChangeTransitionStart: function () {
+          // Pause all Vimeo videos when sliding
+          document.querySelectorAll('.video-wrap iframe').forEach(frame => {
+            try {
+              if (window.Vimeo && Vimeo.Player) {
+                new Vimeo.Player(frame).pause();
+              }
+            } catch (e) {}
+          });
         }
-      },
+      }
     });
 
-    function updateVideoControls() {
-      var slides = document.querySelectorAll(".swiper-slide");
-      slides.forEach(function (slide) {
-        var video = slide.querySelector("video");
-        if (slide.classList.contains('swiper-slide-active')) {
-          video.controls = true;
-          // video.play();
-        } else {
-          video.controls = false;
-          video.pause();
-        }
-      });
-    }
-
-    function addSlideClickListeners() {
-      var slides = document.querySelectorAll(".swiper-slide");
-      slides.forEach(function (slide) {
-        slide.addEventListener('click', function () {
-          var clickedIndex = Array.prototype.indexOf.call(slides, slide);
-          var realIndex = slide.getAttribute('data-swiper-slide-index');
-          swiper.slideToLoop(realIndex);
-        });
-      });
-    }
+    // Prevent iframe interactions from triggering slide navigation
+    document.querySelectorAll('.video-wrap iframe').forEach(frame => {
+      frame.addEventListener('click', e => e.stopPropagation());
+      frame.addEventListener('mousedown', e => e.stopPropagation());
+      frame.addEventListener('touchstart', e => e.stopPropagation());
+      frame.addEventListener('pointerdown', e => e.stopPropagation());
+    });
   </script>
 </section>
 
