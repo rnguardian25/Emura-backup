@@ -34,9 +34,9 @@
     // Null the value inside if no longer in used//
 
     // Set content based on language
-    if (language === 'en') {
-      importantNotice = "SHIPPING NOTICE:";
-      importantMessage = "Due to recent changes in international trade regulations, certain orders may experience delays while goods are processed through customs. Please be assured that we are making every effort to minimise any disruption. We appreciate your understanding and patience. Maintaining fair pricing for our customers remains our foremost priority.";
+       if (language === 'he') {
+      importantNotice = "הודעת משלוחים – ישראל";
+      importantMessage = "עקב המצב הגיאופוליטי הנוכחי, ייתכנו עיכובים בזמני המשלוח לישראל מעבר לזמני האספקה הרגילים שלנו. אנו מודים לכם על ההבנה והסבלנות. לכל שאלה בנוגע להזמנה שלכם, אנא פנו לשירות הלקוחות שלנו.";
     } else {
       importantNotice = "";
       importantMessage = "";
@@ -44,8 +44,8 @@
     // Add more conditions for other languages as needed
 
     // Populate the content in HTML
-    //document.querySelector('.news-banner .news-content .news-subject').innerText = importantNotice;
-    //document.querySelector('.news-banner .news-content .news-title').innerText = importantMessage;
+    document.querySelector('.news-banner .news-content .news-subject').innerText = importantNotice;
+    document.querySelector('.news-banner .news-content .news-title').innerText = importantMessage;
   });
 </script>
 {% comment %} Your HTML tag {% endcomment %}
